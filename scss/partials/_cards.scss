@@ -1,0 +1,125 @@
+.card{
+	background: #FFFFFF;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.10);
+	border:none;
+	border-radius:8px;
+	.card-body{
+		padding:32px;
+	}
+	.card-link{
+		text-transform:uppercase;
+		letter-spacing:.5px;
+		font-size:.9rem;
+		font-weight:600;
+	}
+	.card-icon{
+		position:absolute;
+		top:-65px;
+		left: 0; 
+		right: 0; 
+		margin-left: auto; 
+		margin-right: auto; 
+		width: 100px;
+
+	}
+	&.elevation-2{
+		box-shadow: 0 11px 34px 0 rgba(0,0,0,0.04), 0 7px 34px 0 rgba(0,0,0,0.07);
+	}
+	&.elevation-0{
+		box-shadow:none;
+	}
+
+}
+
+.resource-card{
+	@include transition-duration(.2s);
+	min-height:350px;
+	.card-body{
+		padding:20px 10px;
+		h4{
+			font-size:16px;
+			letter-spacing:1px;
+			font-weight:600;
+		}
+		p{
+			font-weight:600;
+			font-size:18px;
+			line-height:26px;
+			color:$text-color!important;
+		}
+	}
+	.card-footer{
+		background:none;
+		border:none;
+	}
+	&:hover{
+			box-shadow: 0 12px 23px 0 rgba(0,0,0,0.10);
+		}
+}
+
+.service-card{
+	a.card-link{
+		border-bottom:1px solid $link-color;
+		font-size:15px;
+		padding-bottom:5px;
+	}
+}
+
+
+.industry-cards{
+	@include breakpoint(md) {
+		text-align:center;
+	}
+	padding-top:116px;
+	@include breakpoint(md) {
+		padding-top:0px;
+	}
+	.card{
+		background:$off-white-dark-color;
+		border:none;
+		box-shadow:none;
+		@include breakpoint(md) {
+			margin-top:100px;
+		}
+		@include breakpoint(sm) {
+			flex:1 100%;
+		}
+		
+	}
+	.card-footer{
+		border:none;
+		background:transparent;
+	}
+}
+
+.card-grid-card{
+	margin-bottom:20px;
+}
+
+.shadowed-card-link{
+	@include transition-duration(.2s);
+	&:hover{
+		box-shadow: 0 12px 23px 0 rgba(0,0,0,0.10);
+		.card-title{
+			color:$link-color;
+			text-decoration:underline;
+			@include transition-duration(.2s);
+		}
+	}
+}
+
+.people-cards{
+	a{
+		display:block;
+		.card{
+			min-height:450px;
+			@include breakpoint(sm) {
+				min-height:auto;
+			}
+			i.mail-link{
+				color:$dark-text-color;
+			}
+				
+		}
+	}
+}

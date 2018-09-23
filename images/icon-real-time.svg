@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-real-time</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-real-time">
+            <rect id="Rectangle-9" fill="#FFFFFF" x="0" y="0" width="100" height="100"></rect>
+            <g transform="translate(9.000000, 16.000000)">
+                <path d="M49.0167816,-11.4303517 C49.0167816,-12.8320057 47.5815803,-13.8682766 46.0404328,-13.6128749 C36.8526805,-12.0877971 29.3144858,-8.90077543 23.4233848,-4.05180997 C16.908926,1.3152909 13.6516966,8.43354287 13.6516966,17.3127221 C13.6516966,26.1919012 16.8608807,33.3614779 23.2693933,38.8165641 C29.0619397,43.7474047 36.6284688,47.1287271 45.962821,48.9629754 C47.5249114,49.2697018 49.0167816,48.2273209 49.0167816,46.7963384 L49.0167816,-11.4303517 Z" id="Fill-6" fill-opacity="0.22486413" fill="#FFBB5A" transform="translate(31.334239, 17.682542) scale(-1, 1) rotate(90.000000) translate(-31.334239, -17.682542) "></path>
+                <polyline id="Stroke-2933" stroke="#FFBB5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="54 45 42 35.5205952 42 11"></polyline>
+                <path d="M74.9647902,32.4754702 C75.8144524,50.8416176 61.1762496,66 42.9977875,66 C25.3241972,66 11,51.6697258 11,33.996234 C11,16.0857001 25.7151649,1.6138163 43.7150748,2.00786036" id="Stroke-2934" stroke="#FFBB5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M43,2 C56.9902651,2 68.8585336,11.2236216 73,24" id="Stroke-2935" stroke="#FFBB5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,6"></path>
+                <polyline id="Stroke-2936" stroke="#FFBB5A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="81 38 74.9845758 32 68 38"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

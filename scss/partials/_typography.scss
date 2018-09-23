@@ -1,0 +1,269 @@
+// typography baselines and @font face setups
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Open+Sans:400,400i,600,600i');
+
+//imports
+
+@font-face {
+    font-family: 'socialicoregular';
+    src: url('fonts/socialico-webfont.eot');
+    src: url('fonts/socialico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/socialico-webfont.woff') format('woff'),
+         url('fonts/socialico-webfont.ttf') format('truetype'),
+         url('fonts/socialico-webfont.svg#socialicoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'socialico_plusregular';
+    src: url('fonts/socialico_plus-webfont.woff2') format('woff2'),
+         url('fonts/socialico_plus-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//material icons
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+//text transforms
+
+.text-uppercase{
+  text-transform:uppercase;
+}
+
+//text colors
+
+.extra-light-text-color{
+  color:$extra-light-text-color;
+}
+
+.light-text-color{
+  color:$light-text-color;
+}
+
+.text-color{
+  color:$text-color;
+}
+
+.dark-text-color{
+  color:$dark-text-color;
+}
+
+.white-text-color{
+  color:white;
+}
+
+
+
+//alerts
+
+.text-success{
+  color:$success-color;
+}
+
+.text-warning{
+  color:$warning-color;
+}
+
+.text-danger{
+  color:$danger-color;
+}
+
+//links
+
+.link-color{
+  color:$link-color;
+}
+
+
+
+
+//font families
+
+
+
+.regular-font{
+    font-weight:400;
+}
+
+.medium-font{
+    font-weight:600;
+}
+
+.bold-font{
+    font-weight:700;
+}
+
+.extra-bold-font{
+    font-weight:800;
+}
+
+//font-family
+
+.body-font-name{
+  font-family:$body-font-name;
+}
+
+.regular-font-name{
+  font-family:$regular-font-name;
+}
+
+
+
+//social
+
+.social-font-name{
+  font-family:$social-font-name!important;
+}
+
+
+//font color
+
+.primary-text-color{
+  color:$primary-color!important;
+}
+
+.secondary-text-color{
+  color:$secondary-color!important;
+}
+
+
+
+//font size
+
+.micro-text{
+  font-size:0.7rem;
+}
+
+
+//font base
+
+h1{
+  font-size:80px;
+  line-height:96px;
+  font-family:$regular-font-name;
+  @include breakpoint(md) {
+    font-size:55px;
+    line-height:60px;
+  }
+  @include breakpoint(sm) {
+    font-size:47px;
+    line-height:50px;
+  }
+}
+
+h2{
+  font-size:40px;
+  line-height:48px;
+  font-family:$regular-font-name;
+}
+
+h3{
+  font-size:36px;
+  line-height:40px;
+  font-family:$regular-font-name;
+}
+
+h4{
+  font-size:32px;
+  line-height:40px;
+  font-family:$regular-font-name;
+}
+
+h5{
+  font-size:24px;
+  line-height:32px;
+  font-family:$regular-font-name;
+}
+
+h6{
+  font-size:12px;
+  line-height:16px;
+  font-family:$regular-font-name;
+}
+
+p.body-large{
+  font-size:20px;
+  line-height:32px;
+}
+
+p.body-small{
+  font-size:14px;
+  line-height:20px;
+}
+
+//flourishes
+
+.line-above{
+  &:before{
+    content:"";
+    background:$light-text-color;
+    position:absolute;
+    top:-10px;
+    left:0;
+    width:30px;
+    height:1px;
+  }
+}
+
+.border-flourish{
+  width:50%;
+  height:3px;
+  margin:0 auto;
+  background-color:$off-white-darker-color;
+  margin-top:55px;
+}
+
+.border-flourish-below{
+  width:52px;
+  height:3px;
+  background-color:$off-white-darker-color;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+
+//lists
+
+
+
+//mobile
+
+  @include breakpoint(md) {
+
+
+  }
+
+
+  @include breakpoint(sm) {
+
+
+  }

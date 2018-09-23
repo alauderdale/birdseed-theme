@@ -1,0 +1,159 @@
+a{
+	color:$link-color;
+	&:active, &:focus{
+			outline:none;
+			box-shadow:none;
+		}
+	&:hover{
+		color:tint($link-color,30%);
+		text-decoration:none;
+	}
+}
+
+.link-underline{
+	border-bottom:1px solid $primary-color;
+	padding-bottom:2px;
+}
+
+.btn{
+	border-radius:$base-border-radius;
+	font-weight:600;
+	font-size:17px;
+	font-family:$regular-font-name;
+	min-width:219px;
+	i{
+		font-size:17px;
+		position:relative;
+		top:3px;
+		margin-right:10px;
+	}
+	//primary buttons
+	&.btn-primary{
+		background:$link-color;
+		border-color:$link-color;
+		&:hover{
+			@include button-hover($link-color);
+		}
+	}
+	&.btn-secondary{
+		background:white;
+		border-color:$lightest-gray-color;
+		color:$text-color;
+		&:hover{
+			border-color:shade($lightest-gray-color,90%);
+		}
+	}
+	//alert buttons
+	&.btn-danger{
+		background:$danger-color;
+		border-color:$danger-color;
+		&:hover{
+			@include button-hover($danger-color);
+		}
+	}
+	&.btn-success{
+		background:$success-color;
+		border-color:$success-color;
+		&:hover{
+			@include button-hover($success-color);
+		}
+	}
+	&.btn-warning{
+		background:$warning-color;
+		border-color:$warning-color;
+		color:white;
+		&:hover{
+			@include button-hover($warning-color);
+		}
+	}
+	//flat button
+	&.btn-flat{
+		background:transparent;
+		border-color:white;
+		color:$text-color;
+		&:hover{
+			@include button-hover(white);
+		}
+	}
+	//link button
+	&.btn-link{
+		color:$link-color;
+		&:hover{
+			color:shade($link-color,10%);
+		}
+	}
+	&.btn-icon{
+		line-height:1;
+		i{
+			color:$lightest-gray-color;
+			}
+		&:hover, &:focus{
+			i{
+				color:shade($lightest-gray-color,90%);
+			}	
+		}
+	}
+	//white wire
+	&.btn-outline-light{
+		&:hover{
+			color:$link-color;
+		}
+	}
+	//primary wire
+	&.btn-outline-primary{
+		color:$primary-color;
+		border-color:$primary-color;
+		&:hover{
+			background:$primary-color;
+			color:white;
+		}
+		&:active{
+			border-color:$primary-color;
+			background:shade($primary-color,40%)!important;
+		}
+	}
+	//white btn
+	&.btn-light{
+		color:$link-color;
+		box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10), 0 2px 4px 0 rgba(0,0,0,0.04);
+		background:#fff;
+		border:none;
+		&:hover{
+			background:$off-white-color;
+			border:none;
+		}
+	}
+	&.btn-dark{
+		background:$dark-gray-color;
+		&:hover{
+			background:shade($dark-gray-color,100%)!important;
+		}
+	}
+	//sizes
+	&.btn-lg{
+		padding:.8rem 1rem;
+	}
+	&.btn-scroll{
+		color:rgba(255,255,255,.5);
+		&:hover{
+			color:rgba(255,255,255,1);
+		}
+		i{
+			font-size:52px;
+		}
+		&:active, &:focus{
+			outline:none;
+			box-shadow:none;
+		}
+	}
+	&.btn-outline-light {
+		color:white!important;
+		&.active{
+			background:transparent!important;
+		}
+		&:hover{
+			color:$primary-color!important;
+			background:white!important;
+		}
+	}
+}

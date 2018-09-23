@@ -1,0 +1,19 @@
+
+
+
+//sections
+section{
+  padding:$baseline*6 0;
+  @include breakpoint(sm) {
+  	padding:$baseline*6 0;
+  }
+  &.inverse-section{
+  	background:$primary-color;
+  	@extend %white_text;
+    .line-above{
+      &:before{
+        background:rgba(255,255,255,.5);
+      }
+    }
+  }
+}

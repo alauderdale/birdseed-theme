@@ -1,0 +1,41 @@
+footer#primary-footer{
+	padding:$baseline*3 0 $baseline*2 0;
+	padding-bottom:$baseline*5;
+	background: $secondary-color;
+	hr{
+		border-color:rgba(255,255,255,.1);
+	}
+	p{
+		font-family:$regular-font-name;
+		margin-bottom:$baseline/2;
+		&.body-large{
+			@include breakpoint(md) {
+				font-size:16px;
+				line-height:24px;
+			}
+		}
+	}
+	ul.footer-list{
+		li{
+			font-size:14px;
+			line-height:24px;
+			color:rgba(255,255,255,.8);
+			a{
+				@include transition-duration(.2s);
+				color:rgba(255,255,255,.8);
+				&:hover{
+					color:white;
+				}
+			}
+		}
+	}
+	ul.social-list{
+		li{
+			font-size:35px;
+			margin:0;
+			a{
+
+			}
+		}
+	}
+}

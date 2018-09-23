@@ -1,0 +1,39 @@
+//heros
+.page-hero{
+	background-size:cover;
+	position:relative;
+	background-color:white;
+	background-repeat:no-repeat;
+	@include breakpoint(md) {
+		padding:$baseline 0;
+	}
+}
+
+.mark-effect{
+	&:before{
+		content:"";
+		background:url("../images/mountains-2.svg");
+		width:489px;
+		height:168px;
+		position:absolute;
+		right:20px;
+		bottom:-20px;
+	}
+}
+
+.page-hero-offset{
+	background-position-x:200px;
+	@include breakpoint(md) {
+		background-position-x:center;
+	}
+}
+
+.page-hero-offset-sm{
+	background-position-x:100px;
+}
+
+
+.hero-text-container{
+	background:white;
+	padding:$baseline*2;
+}

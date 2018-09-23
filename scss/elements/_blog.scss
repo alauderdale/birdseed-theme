@@ -1,0 +1,91 @@
+$base-blog-font-size: 13pt;
+$base-blog-line-height: 21pt;
+
+.blog-styles{
+	p{
+		font-size:$base-blog-font-size;
+		line-height:$base-blog-line-height;
+	}
+	h1,h2,h3,h4,h5,h6{
+		margin-bottom:$baseline;
+		margin-top:$baseline*2;
+		font-weight:600;
+	}
+	ul{
+		padding-top:.5rem;
+		padding-bottom:.5rem;
+		list-style:none;
+		li{
+			padding-left:20px;
+			background:url('../images/chevron-purple.svg') left 5px no-repeat;
+			margin-bottom:$baseline;
+			font-size:$base-blog-font-size;
+			line-height:18px;
+		}
+	}
+}
+
+
+
+#blog-featured{
+	.blog-thumb{
+		padding:$baseline;
+		margin-bottom:$baseline*2;
+		@include breakpoint(md) {
+			padding:0;
+			padding-bottom:$baseline*2;
+			text-align:center;
+			.btn{
+				text-align:center!important;
+			}
+			p{
+				font-size:18px;
+				line-height:24px;
+			}
+		}
+		a{
+			p{
+				color:$text-color;
+				@include transition-duration(.2s);
+				&:hover{
+					color:$link-color;
+				}
+			}
+		}
+	}
+}
+
+
+#blog-index{
+	padding-top:$baseline*8;
+	.card-columns{
+		@include breakpoint(md) {
+				column-count:2;	
+		}
+		@include breakpoint(sm) {
+				column-count:1;	
+		}
+	}
+}
+
+
+	a.blog-thumb-container{
+		padding:10px;
+		display:inline-block;
+		.blog-thumb{
+			@include transition-duration(.2s);
+			vertical-align:top;
+			display:inline-block;
+			img{
+				overflow:visible;
+			}
+			p{
+				color:$light-text-color!important;
+			}
+			&:hover{
+				// transform: translate(0,-10px);
+	   //  		transition-delay: 0s !important;
+			}
+		}
+	}
+

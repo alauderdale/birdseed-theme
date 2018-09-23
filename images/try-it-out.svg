@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="187px" height="74px" viewBox="0 0 187 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 32</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---3" transform="translate(-1131.000000, -825.000000)">
+            <g id="Group-33" transform="translate(1134.000000, 827.000000)">
+                <g id="Group-32">
+                    <g id="Group-21" transform="translate(75.000000, 0.000000)" stroke="#424651" stroke-linecap="round" stroke-width="3.2">
+                        <path d="M95.4145911,12.0197194 C111.324816,26.3760118 108.715832,17.7158534 93.1569216,39.0197194" id="Path-2" transform="translate(99.656922, 25.519719) rotate(40.000000) translate(-99.656922, -25.519719) "></path>
+                        <path d="M98,21.4359237 C65.4648438,-3.6441329 36.6914062,-10.4449141 0,21.4359237" id="Path-3"></path>
+                    </g>
+                    <text id="Try-it-out" font-family="HandOfSean, Hand Of Sean" font-size="26" font-weight="normal" fill="#424651">
+                        <tspan x="0" y="59">Try it out</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

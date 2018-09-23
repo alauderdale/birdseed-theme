@@ -1,0 +1,309 @@
+#primary-nav{
+	background:white;
+	padding:17px 0;
+	box-shadow:0 2px 60px 0 rgba(50,83,63,0.31);
+	.navbar-nav .dropdown:hover > .dropdown-menu {
+	    display: block;    
+	}
+	.nav-item .dropdown-menu{
+		top:30px;
+	}
+	@include transition-duration(.3s);
+	@include breakpoint(md) {
+		padding:10px 15px;
+		@include transition-duration(0s);
+		.navbar-brand{
+			margin:0;
+			img{
+				width:150px;
+			}
+		}
+	}
+	.contact-button{
+		padding-right: 1rem;
+		padding-left: 1rem;
+		margin-left:10px;
+		font-size:16px;
+		font-weight:700;
+	}
+	.navbar-brand{
+		position:relative;
+		top:-4px;
+		margin-right:40px;
+		@include breakpoint(md) {
+		
+		}
+	}
+	.navbar-nav{
+		
+		.nav-item{
+			font-size:14px;
+			font-weight:700;
+			letter-spacing:.5px;
+			line-height:28px;
+			font-family:$regular-font-name;
+			&.nav-item-primary{
+				a{
+					color:$dark-text-color;
+					padding:2px 0;
+					margin:0 15px;
+					&:hover{
+						color:$primary-color;
+					}
+					.material-icons{
+						color:$primary-color;
+						font-size:18px;
+						marign:0;
+						padding:0;
+						position:relative;
+						top:5px;
+					}
+				}
+			}
+			a{
+				@include transition-duration(.2s);
+				&.sign-in{
+					margin-right:20px;
+				}
+			}
+			.dropdown-menu{
+				box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10), 0 2px 4px 0 rgba(0,0,0,0.04);
+				border-radius: 3px;
+				border:none;
+				a.dropdown-item{
+					font-size:13px;
+					font-weight:normal;
+					margin:0;
+				}
+				a{
+					font-size: 13px;
+					font-weight: normal;
+					display: block;
+					width: 100%;
+					padding: .25rem 1.5rem;
+					clear: both;
+					font-weight: 400;
+					color: #212529;
+					text-align: inherit;
+					white-space: nowrap;
+					background-color: transparent;
+					border: 0;
+					margin:0;
+					&:hover{
+						background-color: #f8f9fa;
+					}
+				}
+			}
+		}
+	}
+	&.navbar-page-top{
+		background:transparent;
+		box-shadow:none;
+		a.sign-in{
+			color:white;
+		}
+		.create-account-button{
+			background:white;
+			color:$primary-color;
+			border:none;
+		}
+		@include breakpoint(md) {
+			background:white;
+		}
+	}
+}
+
+
+//mobile menu
+html{
+	&.nav-open{
+		.mobile-menu{
+			visibility:visible;
+		}
+		#primary-nav{
+			background:transparent!important;
+			box-shadow:none;
+			.navbar-brand{
+				opacity:0;
+			}
+		}
+	}
+}
+
+.toggle-menu-button{
+	position:relative;
+}
+
+.mobile-menu{
+	width: 100%;
+    position: fixed;
+    height: 100%;
+    background: $primary-color;
+    top: 0;
+    z-index: 999;
+    visibility:hidden;
+    padding-top:100px;
+    .call-us{
+    	position:absolute;
+    	top:30px;
+    	text-align:center;
+    	width:100%;
+    	font-weight:700;
+    	font-size:30px;
+    	color:rgba(255,255,255,.8);
+    }
+    a{
+    	color:white;
+    }
+    .navbar-nav{
+    	.btn{
+    		width:200px;
+    		margin:0 auto;
+    	}
+    	.nav-item{
+    		text-align:center;
+    		font-family:$regular-font-name;
+    		font-weight:800;
+    		font-size:42px;
+    		margin-bottom:30px;
+    		a{
+    			color:white;
+    			&:hover{
+    				color:rgba(255,255,255,.8)!important;
+    			}
+    		}
+    	}
+    }
+}
+
+//change tcon to white on menu show
+.tcon-transform{
+	.tcon-menu__lines::before, .tcon-menu__lines::after{
+		background:white!important;
+	}
+}
+
+
+//menu toggle
+
+$tcon-size: 24px !default;
+$tcon-transition: .3s !default;
+$tcon-jstransform: 'tcon-transform' !default;
+
+$tcon-menu-radius: ($tcon-size / 14) !default;
+$tcon-menu-color: $primary-color !default;
+$tcon-menu-arrowleft-transformation: (
+
+	) !default;
+$tcon-menu-arrow360left-transformation: (
+
+	) !default;
+.tcon {
+	appearance: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: $tcon-size;
+	transition: $tcon-transition;
+	user-select: none;
+	width: $tcon-size;
+	background: transparent;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+
+	> * {
+		display: block;
+	}
+
+	&:hover,
+	&:focus {
+    outline: none; // see issue #36 https://github.com/grayghostvisuals/transformicons/issues/36
+  }
+  &::-moz-focus-inner {
+  	border: 0;
+  }
+}
+
+@mixin tcon-menu-lines {
+	display: inline-block;
+	height: ($tcon-size / 14);
+	width: $tcon-size;
+	border-radius: $tcon-menu-radius;
+	transition: $tcon-transition;
+	background: $tcon-menu-color;
+}
+
+.tcon-menu__lines {
+	@include tcon-menu-lines;
+	position: relative;
+
+	&::before,
+	&::after {
+		@include tcon-menu-lines;
+		content: '';
+		position: absolute;
+		left: 0;
+		transform-origin: ($tcon-size / 14) center;
+		width: 100%;
+	}
+
+	&::before {
+		top: ($tcon-size / 4);
+	}
+
+	&::after {
+		top: -($tcon-size / 4);
+	}
+
+	.#{$tcon-jstransform} & {
+		transform: scale3d(.8, .8, .8);
+	}
+}
+.tcon-menu--xcross {
+	width: auto;
+
+	&.#{$tcon-jstransform} {
+		.tcon-menu__lines {
+			background: transparent;
+
+			&::before,
+			&::after {
+				transform-origin: 50% 50%;
+				top: 0;
+				width: $tcon-size;
+			}
+
+			&::before {
+				transform: rotate3d(0, 0, 1, 45deg);
+			}
+
+			&::after {
+				transform: rotate3d(0, 0, 1, -45deg);
+			}
+		}
+	}
+}
+// see issue #7 https://github.com/grayghostvisuals/transformicons/issues/7#issuecomment-59813596
+.tcon-visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	&:active,
+	&:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}

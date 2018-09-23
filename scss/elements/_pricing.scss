@@ -1,0 +1,70 @@
+
+#pricing-hero{
+	@include breakpoint(sm) {
+		padding-top:$baseline*6;
+		.create-account-promo{
+		}
+		.account-options{
+			margin-bottom:$baseline*3;
+		}
+		.form-group {
+			text-align:left;
+		}
+	}
+}
+
+ul.pricing-list{
+	width:100%;
+	li{
+		border-bottom:1px solid $border-color;
+		padding:$baseline 0;
+		vertical-align: middle;
+		p{
+			margin-bottom:0;
+			display: inline-block;
+			vertical-align: middle;
+			i{
+				margin-right:10px;
+				position:relative;
+				top:3px;
+			}
+		}
+		&:last-of-type{
+			border:none;
+		}
+	}
+}
+
+.price-indicator{
+	position:relative;
+	display:inline-block;
+	right: 38px;
+	h1{
+		font-size:80px!important;
+		font-weight:700;
+		margin-bottom:0;
+		.dollar-symbol{
+			font-size:32px;
+			position: absolute;
+			top: -13px;
+			left: -20px;
+		}
+		.per{
+			font-size:32px;
+			position: absolute;
+			top: 13px;
+			left: 96px;
+		}
+	}
+}
+
+
+#price-panel{
+	background:$primary-light-color url("../images/price-panel-bg.png") no-repeat center center;
+	background-size:100%;
+	.pricing-feature{
+		@include breakpoint(md) {
+			text-align:center;
+		}
+	}
+}
