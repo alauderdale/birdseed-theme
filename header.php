@@ -32,11 +32,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/bower_components/node_modules/bootstrap/dist/js/bootstrap.min.js">
   </script>
+
   <?php wp_head(); ?>
 
 </head>
 
 <body class='styles styles_index'>
+  <style>
+    <?php the_field('custom_css', 'option'); ?>
+  </style>
     <div class="birdseed-button-container">
       <div class="birdseed-button">
         <img src="<?php bloginfo('template_url'); ?>/images/birdseed-button.svg" width="62px">
@@ -47,7 +51,7 @@
       <div class='navbar-nav mx-auto'>
         <?php    
           $defaults = array(
-          'theme_location' => 'menu-primary',
+          'theme_location' => 'menu-mobile',
           'container'       => false,  
           'echo'            => false,
           'fallback_cb'     => false,
@@ -58,11 +62,11 @@
           );
           echo strip_tags(wp_nav_menu( $defaults ), '<div><div><a>');
         ?>
-        <a class='btn btn-outline-light btn-lg  double-margin-top' href='<?php the_field('get_started_page', 'option'); ?>''>
+        <a class='btn btn-outline-light btn-lg  double-margin-top' href='<?php // the_field('get_started_page', 'option'); ?>''>
           Get started
         </a>
         <div class='nav-item margin-top'>
-          <a class='nav-link' href='<?php the_field('sign_in_url', 'option'); ?>'>
+          <a class='nav-link' href='<?php // the_field('sign_in_url', 'option'); ?>'>
             <small>
                 <small>
                   Sign in
@@ -151,16 +155,16 @@
         <div class='d-none d-lg-inline ml-auto'>
           <div class='navbar-nav'>
             <div class='nav-item'>
-              <a class='nav-link sign-in' href='<?php the_field('sign_in_url', 'option'); ?>'>
-                Sign in
+              <a class='nav-link sign-in' href='<?php the_field('header_sign_in_button_url', 'option'); ?>'>
+                <?php the_field('header_sign_in_button_text', 'option'); ?>
               </a>
             </div>
           </div>
         </div>
         <div class='navbar-nav d-none d-lg-inline position-relative'>
           <div class='form-inline'>
-            <a class='btn btn-primary btn-lg nav-link create-account-button' href='<?php the_field('get_started_page', 'option'); ?>'>
-              Create free account
+            <a class='btn btn-primary btn-lg nav-link create-account-button' href='<?php the_field('header_primary_button_page_link', 'option'); ?>'>
+              <?php the_field('header_primary_button_text', 'option'); ?>
             </a>
           </div>
         </div>

@@ -110,9 +110,7 @@ $(document).ready(function(){
 					<h2 class='text-center margin-bottom bold-font'>
 						<?php the_field('tools_title');?>
 					</h2>
-					<p>
-						<?php the_field('tools_subtext');?>
-					</p>
+
 				</div>
 				<?php if( have_rows('tools') ): ?>
 					<div class='carousel-inner'>
@@ -143,7 +141,7 @@ $(document).ready(function(){
 				<?php endif; ?>
 				<div class='container'>
 					<div class='row justify-content-center'>
-						<div class='col-lg-12'>
+						<div class='col-xl-12'>
 							<?php if( have_rows('tools') ): 
 
 							$i = -1
@@ -160,7 +158,7 @@ $(document).ready(function(){
 
 										$i++;
 									?>
-										<div class='tool-icon tool-icon-chat col-lg col-md-2' data-slide-to='<?php echo $i ?>' data-target='#ToolsSLider'>
+										<div class='tool-icon'  data-slide-to='<?php echo $i ?>' data-target='#ToolsSLider'>
 											<img src='<?php echo $icon; ?>' width='73px'>
 											<p class='body-small'>
 												<?php echo $title; ?>

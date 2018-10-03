@@ -69,9 +69,16 @@ Template Name: About
 										<p class='body-large'>
 											<?php the_field('address', 'option'); ?>
 										</p>
-										<a class='btn btn-lg btn-primary margin-top' href='<?php the_field('contact_button_url');?>'>
+<!-- 										<a class='btn btn-lg btn-primary margin-top' href='<?php the_field('contact_button_url');?>'>
 											<?php the_field('contact_button_title');?>
-										</a>
+										</a> -->
+										<div class="card double-margin-top">
+											<div class="card-header">
+												<p class="no-margin-bottom">
+													<?php the_field('contact_us_helper_text');?>
+												</p>
+											</div>
+										</div>
 									</div>
 									<div class='col-md-7'>
 										<img class='max-width' src='<?php the_field('map_image');?>'>

@@ -38,7 +38,7 @@ get_header(); ?>
 									<?php while (have_posts()) : the_post(); ?>
 										<a class="blog-thumb-container" href="<?php the_permalink();?>">
 											<div class='blog-thumb card elevation-2'>
-												<?php if( get_field('banner_image') ): ?>
+												<?php if (has_post_thumbnail( $post->ID ) ): ?>
 													<?php the_post_thumbnail('medium', array('class' => 'card-img-top')); ?>
 												<?php endif; ?>
 												<div class='card-body'>

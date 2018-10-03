@@ -32,10 +32,10 @@ $(document).ready(function(){
   //hover activate
 
 
-	$(".hover-slider .carousel-indicators div").hover(function(){
-	  var goto = Number( $(this).attr('data-slide-to') );
-	  $("#ToolsSLider").carousel(goto);  
-	});
+	// $(".hover-slider .carousel-indicators div").hover(function(){
+	//   var goto = Number( $(this).attr('data-slide-to') );
+	//   $("#ToolsSLider").carousel(goto);  
+	// });
 
   // ///adding class
 

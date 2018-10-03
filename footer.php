@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class='row margin-top'>
-          <div class='col-md-9'>
+          <div class='col-md-8'>
             <div class='row'>
               <div class='col-md'>
                 <p class='bold-font white-text-color'>
@@ -27,6 +27,7 @@
                     <a href='mailto:<?php the_field('email', 'option'); ?>'>
                       <?php the_field('email', 'option'); ?>
                     </a>
+                    <?php the_field('phone_number', 'option'); ?>
                   </li>
                 </ul>
               </div>
@@ -62,31 +63,36 @@
               </div>
             </div>
           </div>
-          <div class='col-md-3'>
+          <div class='col-md-4'>
             <div class='row'>
               <div class='col-md'>
                 <p class='body-large bold-font white-text-color'>
                   <?php the_field('footer_promo', 'option'); ?>
                 </p>
-                <ul class='list-inline social-font-name social-list'>
-                  <li class='list-inline-item'>
+                <ul class='list-inline social-list'>
+                  <li class='list-inline-item social-font-name '>
                     <a href='<?php the_field('facebook_link', 'option'); ?>'>
                       f
                     </a>
                   </li>
-                  <li class='list-inline-item'>
+                  <li class='list-inline-item social-font-name '>
                     <a href='<?php the_field('linkedin_link', 'option'); ?>'>
                       i
                     </a>
                   </li>
-                  <li class='list-inline-item'>
+                  <li class='list-inline-item social-font-name '>
                     <a href='<?php the_field('twitter_link', 'option'); ?>'>
                       l
                     </a>
                   </li>
-                  <li class='list-inline-item'>
+                  <li class='list-inline-item social-font-name '>
                     <a href='<?php the_field('youtube_link', 'option'); ?>'>
                       x
+                    </a>
+                  </li>
+                  <li class='list-inline-item social-plus-font-name'>
+                    <a href='<?php the_field('instagram_link', 'option'); ?>'>
+                      i
                     </a>
                   </li>
                 </ul>
