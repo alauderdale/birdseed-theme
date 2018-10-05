@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class='container'>
 					<div class='row'>
 						<div class='col-md'>
-							<div class='double-padding-bottom text-center'>
+							<div class=' text-center'>
 								<h1 class='double-margin-bottom bold-font'>
 									BirdSpeak
 								</h1>
@@ -29,6 +29,32 @@ get_header(); ?>
 									Collection of articles, videos, and resources made by BirdSeed.
 								</p>
 							</div>
+
+							<ul class="nav justify-content-center double-padding-bottom category-nav">
+							<li class="current-cat">
+								<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+									All
+								</a>
+							</li>
+							<?php wp_list_categories( array(
+						        'orderby'    => 'name',
+						        'title_li'   => false, 
+						        'include'  => array( 59, 85, 6),
+						    ) ); ?> 
+						    <?php wp_reset_postdata(); ?>
+						    <li class="dropdown">
+							    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+							    <div class="dropdown-menu">
+							      <?php wp_list_categories( array(
+							      		'parent' => 0,
+								        'orderby'    => 'name',
+								        'title_li'   => false,
+								        'exclude'  => array( 59, 85, 6),
+								        'style'   => ''
+								   ) ); ?> 
+							    </div>
+							  </li>
+							</ul>
 						</div>
 					</div>
 					<div class='row justify-content-center'>
@@ -45,6 +71,12 @@ get_header(); ?>
 													<h5 class='text-color'>
 														<?php the_title();?>
 													</h5>
+													<p class="body-small half-margin-bottom">
+														<?php
+															$category = get_the_category(); 
+															echo $category[0]->cat_name;
+														?>
+													</p>
 													<?php the_excerpt();?>
 													<div class='text-left'>
 														<button class='btn btn-link no-padding-left text-left' type='button' onclick'window.location.href="<?php the_permalink();?>">

@@ -32,9 +32,6 @@
 	}
 	@include breakpoint(sm) {
 		padding-top:$baseline*4;
-		img{
-			margin-top:$baseline*2;
-		}
 	}
 	h1{
 		position:relative;
@@ -50,7 +47,7 @@
 			line-height:24px;
 		}
 		&.location-title{
-			padding-top:$baseline*2;
+			padding-top:$baseline;
 			@include breakpoint(lg) {
 				padding-top:$baseline/2;
 			}
@@ -59,8 +56,14 @@
 			}
 		}
 	}
-	img{
-		border-radius:8px;
+	.map-img{
+		img{
+			border-radius:8px;
+			@include breakpoint(sm) {
+				margin-top:$baseline*2;
+			}
+
+		}
 	}
 }
 

@@ -27,6 +27,8 @@
                     <a href='mailto:<?php the_field('email', 'option'); ?>'>
                       <?php the_field('email', 'option'); ?>
                     </a>
+                  </li>
+                  <li>
                     <?php the_field('phone_number', 'option'); ?>
                   </li>
                 </ul>

@@ -1,15 +1,8 @@
 
 #pricing-hero{
+	padding-top:$baseline*8;
 	@include breakpoint(sm) {
-		padding-top:$baseline*6;
-		.create-account-promo{
-		}
-		.account-options{
-			margin-bottom:$baseline*3;
-		}
-		.form-group {
-			text-align:left;
-		}
+		padding-top:$baseline*5;
 	}
 }
 
@@ -17,12 +10,13 @@ ul.pricing-list{
 	width:100%;
 	li{
 		border-bottom:1px solid $border-color;
-		padding:$baseline 0;
+		padding:$baseline/2 0;
 		vertical-align: middle;
 		p{
 			margin-bottom:0;
 			display: inline-block;
 			vertical-align: middle;
+			font-size:20px;
 			i{
 				margin-right:10px;
 				position:relative;
@@ -33,6 +27,67 @@ ul.pricing-list{
 			border:none;
 		}
 	}
+}
+
+.pricing-card-deck{
+	@include breakpoint(sm) {
+		flex-direction:column;
+		.card{
+    		margin-bottom: 15px;
+		}
+	}
+	.card-body{
+		padding-bottom:$baseline;
+	}
+	.card-footer{
+		padding-top:0!important;
+		.btn{
+			padding:22px;
+		}
+	}
+}
+
+///make pricing panels smaller on md size
+@include breakpoint(md) {
+	.pricing-card-deck{
+		.card{
+			.card-header{
+				h3{
+					font-size:30px;
+				}
+			}
+			.card-body{
+				padding:20px;
+				padding-bottom:0;
+				text-align:left;
+				ul.pricing-list{
+					li{
+						p{
+							font-size:14px;
+						}
+					}
+				}
+				.pricing-feature{
+					p{
+						font-size:14px;
+						&.body-small{
+							font-size:12px;
+							line-height:16px;
+						}
+					}
+				}
+			}
+		}
+		.engagement-component{
+			text-align:left;
+		}
+	}
+}
+
+.pricing-feature{
+	background:$off-white-color;
+	margin-bottom:$baseline;
+	padding:$baseline;
 }
 
 .price-indicator{

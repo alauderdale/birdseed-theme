@@ -13,7 +13,7 @@ Template Name: About
 		<div class='container'>
 			<div class='row'>
 				<div class='col-xl-7 col-lg-6 col-md-6 order-md-2'>
-					<img class='no-padding-top' src='<?php the_field('story_image');?>' width='776px'>
+					<img class='no-padding-top hero-img' src='<?php the_field('story_image');?>' width='776px'>
 				</div>
 				<div class='col-xl-5 col-lg-6 col-md-6 order-md-1'>
 					<h1 class='double-margin-bottom bold-font'>
@@ -62,26 +62,29 @@ Template Name: About
 						<div class='card-body'>
 							<div class='padded no-padding-top no-padding-bottom'>
 								<div class='row'>
-									<div class='col-md-5'>
+									<div class='col-lg-5'>
 										<p class='body-large bold-font no-margin-bottom location-title regular-font-name'>
 											BirdSeed office
 										</p>
-										<p class='body-large'>
+										<p>
 											<?php the_field('address', 'option'); ?>
+											</br>
+											<?php the_field('phone_number', 'option'); ?>
 										</p>
-<!-- 										<a class='btn btn-lg btn-primary margin-top' href='<?php the_field('contact_button_url');?>'>
-											<?php the_field('contact_button_title');?>
-										</a> -->
-										<div class="card double-margin-top">
-											<div class="card-header">
-												<p class="no-margin-bottom">
-													<?php the_field('contact_us_helper_text');?>
+										<div class="engagement-component media padded bordered margin-bottom">
+											<img class="engagement-button margin-right" src="<?php the_field('engagement_component_image', 'option'); ?>" width="40px">
+											<div class="media-body">
+												<p class="primary-text-color no-margin-bottom bold-font body-small">
+													<?php the_field('engagement_component_title', 'option'); ?>
+												</p>
+												<p class="no-margin-bottom body-small">
+													<?php the_field('engagement_component_text_contact');?>
 												</p>
 											</div>
 										</div>
 									</div>
-									<div class='col-md-7'>
-										<img class='max-width' src='<?php the_field('map_image');?>'>
+									<div class='col-lg-7'>
+										<img class='max-width map-img' src='<?php the_field('map_image');?>'>
 									</div>
 								</div>
 							</div>
@@ -91,25 +94,33 @@ Template Name: About
 			</div>
 		</div>
 	</section>
-	<section id='partner'>
+	<section class="inverse-section" id='partner'>
 		<div class='container'>
-			<div class='row'>
-				<div class='col-md-6 order-md-3'>
-					<div class='embed-responsive embed-responsive-16by9 video-thumbnail margin-top'>
+			<div class='row justify-content-center'>
+				<div class='col-lg-6 order-lg-3'>
+					<div class='embed-responsive embed-responsive-16by9 video-thumbnail margin-top double-margin-bottom'>
 						<iframe class='embed-responsive-item' src='<?php the_field('partner_video_url');?>'></iframe>
 					</div>
 				</div>
-				<div class='col-md-1 order-md-2'></div>
-				<div class='col-md-5 order-md-1'>
+				<div class='col-lg-1 order-lg-2'></div>
+				<div class='col-lg-5 order-lg-1'>
 					<h2 class='bold-font margin-bottom'>
 						<?php the_field('partner_title');?>
 					</h2>
 					<p class='body-large'>
 						<?php the_field('partner_text');?>
 					</p>
-					<a class='btn btn-lg btn-light margin-top' href='/pricing'>
-						Let's partner
-					</a>
+					<div class="engagement-component media padded bordered margin-bottom margin-top">
+						<img class="engagement-button margin-right" src="<?php the_field('engagement_component_image', 'option'); ?>" width="40px">
+						<div class="media-body">
+							<p class="primary-text-color no-margin-bottom bold-font body-small">
+								<?php the_field('engagement_component_title', 'option'); ?>
+							</p>
+							<p class="no-margin-bottom body-small">
+								<?php the_field('engagement_component_text_partner');?>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

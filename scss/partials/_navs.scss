@@ -122,4 +122,37 @@ ul.pagination{
 	}
 }
 
+//category navs
 
+ul.category-nav{
+	li{
+		margin-right:24px;
+		&.current-cat{
+			a{
+				color:$text-color;
+			}
+		}
+		&.dropdown{
+			.dropdown-menu{
+				a{
+				    display: block;
+				    width: 100%;
+				    padding: .25rem 1.5rem;
+				    clear: both;
+				    font-weight: 400;
+				    color: #212529;
+				    text-align: inherit;
+				    white-space: nowrap;
+				    background-color: transparent;
+				    border: 0;
+				    & + br{
+				    	display:none;
+				    }
+				    &:hover{
+				    	background:#fafafa;
+				    }
+				}
+			}
+		}
+	}
+}

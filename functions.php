@@ -294,3 +294,7 @@ function sa_bootstrap_paginate_links() {
 }
 
 
+//category walker
+
+
+

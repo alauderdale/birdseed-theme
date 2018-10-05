@@ -62,11 +62,11 @@
           );
           echo strip_tags(wp_nav_menu( $defaults ), '<div><div><a>');
         ?>
-        <a class='btn btn-outline-light btn-lg  double-margin-top' href='<?php // the_field('get_started_page', 'option'); ?>''>
-          Get started
+        <a class='btn btn-outline-light btn-lg  double-margin-top' href='<?php the_field('header_primary_button_page_link', 'option'); ?>''>
+          <?php the_field('header_primary_button_text', 'option'); ?>
         </a>
         <div class='nav-item margin-top'>
-          <a class='nav-link' href='<?php // the_field('sign_in_url', 'option'); ?>'>
+          <a class='nav-link' href='<?php the_field('header_sign_in_button_url', 'option'); ?>'>
             <small>
                 <small>
                   Sign in

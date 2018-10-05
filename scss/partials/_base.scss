@@ -141,3 +141,23 @@ img{
     background-size:100%;
   }
 }
+
+//engagement component
+
+.engagement-component{
+  background:rgba(255,255,255,.6);
+  @include breakpoint(md) {
+    p{
+      &.body-small{
+        font-size:12px!important;
+        line-height:16px!important;
+      }
+    }
+  }
+}
+
+.inverse-section{
+  .engagement-component{
+    background:rgba(0,0,0,.1);
+  }
+}

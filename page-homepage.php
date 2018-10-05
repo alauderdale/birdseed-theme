@@ -48,7 +48,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 				<div class='col-xl-6 col-lg-5 col-md-6'>
-					<img class='padded no-padding-top' src='<?php the_field('hero_image');?>' width='545px'>
+					<img class='padded no-padding-top hero-img' src='<?php the_field('hero_image');?>' width='545px'>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		<div class='container'>
 			<div class='row'>
 				<div class='col-lg-12'>
-					<h2 class='text-center margin-bottom'>
+					<h2 class='text-center margin-bottom bold-text'>
 						<?php the_field('why_title');?>
 					</h2>
 					<div class='row justify-content-center'>
@@ -131,7 +131,7 @@ $(document).ready(function(){
 									<img class='d-block w-100' src='<?php echo $image; ?>'>
 								</div>
 								<div class='carousel-caption'>
-									<p style='background-color:<?php echo $color_hex; ?>;'>
+									<p class="bold-font" style='background-color:<?php echo $color_hex; ?>;'>
 										<?php echo $description; ?>
 									</p>
 								</div>

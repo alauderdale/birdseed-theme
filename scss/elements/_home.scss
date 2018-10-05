@@ -1,20 +1,20 @@
 .main-hero{
 	padding-top:$baseline*10;
 	background: url("../images/main-header-bg.svg") no-repeat top right;
-	img{
+	img.hero-img{
 		position:relative;
 		top:-20px;
 	}
 	@include breakpoint(lg) {
 		background-position-x:550px;
-		img{
+		img.hero-img{
 			width:440px;
 			top:0px;
 		}
 	}
 	@include breakpoint(md) {
 		background-position-x:400px;
-		img{
+		img.hero-img{
 			width:420px;
 			left:10px;
 		}
@@ -29,7 +29,7 @@
 		padding-bottom:none;
 		text-align:center;
 		background-image:none;
-		img{
+		img.hero-img{
 			margin-top:$baseline*2;
 			max-width:100%;
 		}
@@ -53,10 +53,10 @@
 	.card{
 		min-height:384px;
 		@include breakpoint(lg) {
-			min-height:412px;
+			min-height:442px;
 		}
 		@include breakpoint(md) {
-			min-height:528px;
+			min-height:585px;
 		}
 		@include breakpoint(sm) {
 			min-height:auto;
