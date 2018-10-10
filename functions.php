@@ -35,6 +35,8 @@ function boiler_setup() {
 		'menu-tour' => __( 'Tour menu', 'boiler' ),
 		'menu-about' => __( 'About menu', 'boiler' ),
 		'menu-legal' => __( 'Legal menu', 'boiler' ),
+		'menu-blog-cats' => __( 'Blog cats menu', 'boiler' ),
+		'menu-blog-cats-more' => __( 'Blog cats menu (more)', 'boiler' ),
 		'menu-header' => __( 'Header menu', 'boiler' )
 	) );
 

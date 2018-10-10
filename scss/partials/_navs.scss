@@ -127,7 +127,7 @@ ul.pagination{
 ul.category-nav{
 	li{
 		margin-right:24px;
-		&.current-cat{
+		&.current-cat, &.current-menu-item{
 			a{
 				color:$text-color;
 			}

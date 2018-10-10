@@ -59,6 +59,9 @@ Template Name: Pricing
 										</div>
 									</div>
 									<div class='text-center card-footer no-styling'>
+										<a class="btn btn-link" href="#free-how">
+											How is it free?
+										</a>	
 										<a class='btn btn-lg btn-primary btn-block' href='<?php the_field('create_account_link', 'option'); ?>'>
 											Create account
 										</a>
@@ -129,7 +132,7 @@ Template Name: Pricing
 					</div>
 				</div>
 			</section>
-			<section id='price-panel'>
+			<section id='free-how'>
 				<div class='container'>
 					<div class='row justify-content-center text-center'>
 						<div class='col-lg-8'>

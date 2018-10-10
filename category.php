@@ -33,31 +33,41 @@ get_header(); ?>
 								</p>
 							</div>
 
+							<!-- begin menu -->
 							<ul class="nav justify-content-center double-padding-bottom category-nav">
 							<li>
 								<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
 									All
 								</a>
 							</li>
-							<?php wp_list_categories( array(
-						        'orderby'    => 'name',
-						        'title_li'   => false, 
-						        'include'  => array( 59, 85, 6),
-						    ) ); ?> 
+					        <?php wp_nav_menu( array( 
+							'theme_location' => 'menu-blog-cats',  
+							'menu_class' => '',
+							'container' => false,
+							'items_wrap'  => '%3$s' 
+							)); ?>
 						    <?php wp_reset_postdata(); ?>
 						    <li class="dropdown">
 							    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
 							    <div class="dropdown-menu">
-							      <?php wp_list_categories( array(
-							      		'parent' => 0,
-								        'orderby'    => 'name',
-								        'title_li'   => false,
-								        'exclude'  => array( 59, 85, 6),
-								        'style'   => ''
-								   ) ); ?> 
+
+						        <?php    
+						          $defaults = array(
+						          'theme_location' => 'menu-blog-cats-more',
+						          'container'       => false,  
+						          'echo'            => false,
+						          'fallback_cb'     => false,
+						          'before'       => '<div>',
+						          'after'        => '</div>',
+						          'items_wrap'      => '%3$s',
+						          'depth'           => 0
+						          );
+						          echo strip_tags(wp_nav_menu( $defaults ), '<div><div><a>');
+						        ?>
 							    </div>
 							  </li>
 							</ul>
+							<!-- end menu -->
 						</div>
 					</div>
 					<div class='row justify-content-center'>
