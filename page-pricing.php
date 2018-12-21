@@ -108,9 +108,9 @@ Template Name: Pricing
 																<p class='light-text-color body-small'>
 																	<?php echo $text; ?>
 																</p>
-																<h3 class='bold-font no-margin-bottom regular-font-name body-large'>
+																<h4 class='bold-font no-margin-bottom regular-font-name '>
 																	$<?php echo $price; ?><span style="font-size:20px;">/month</span>
-																</h3>
+																</h4>
 															</div>
 															<div class="col-lg-6">
 															<img class='img-fluid' src='<?php echo $icon; ?>' > 
