@@ -98,6 +98,10 @@
 			@include breakpoint(md) {
 				background-position-y:-50px;
 			}
+			@media (min-width : 1729px) {
+				background-position-y:-400px;
+			}
+
 		}
 		.carousel-caption{
 			top:100px;

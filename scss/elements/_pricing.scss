@@ -47,6 +47,14 @@ ul.pricing-list{
 	}
 }
 
+.pricing-feature{
+	p{
+		&.body-large{
+			line-height: 23px;
+		}
+	}
+}
+
 ///make pricing panels smaller on md size
 @include breakpoint(md) {
 	.pricing-card-deck{
@@ -68,12 +76,15 @@ ul.pricing-list{
 					}
 				}
 				.pricing-feature{
+					text-align: center;
 					p{
-						font-size:14px;
 						&.body-small{
 							font-size:12px;
 							line-height:16px;
 						}
+					}
+					img{
+						width:150px;
 					}
 				}
 			}

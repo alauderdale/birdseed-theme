@@ -40,8 +40,8 @@ $(document).ready(function(){
 							<?php the_field('primary_button_text');?>
 						</a>
 						<button class='btn btn-lg btn-light' data-src='<?php the_field('video_url');?>' data-target='#homeVideoModal' data-toggle='modal' type='button'>
-							<i class='material-icons'>
-								play_arrow
+							<i class='material-icons' style='font-size: 30px; top:9px; margin-top: -14px;'>
+								play_circle_outline
 							</i>
 							<?php the_field('video_button_text');?>
 						</button>
@@ -58,48 +58,71 @@ $(document).ready(function(){
 			<div class='row'>
 				<div class='col-lg-12'>
 					<h2 class='text-center margin-bottom bold-text'>
-						<?php the_field('why_title');?>
+						<?php the_field('overview_title');?>
 					</h2>
 					<div class='row justify-content-center'>
-						<div class='col-lg-6'>
+						<div class='col-lg-8'>
 							<p class='text-center body-large light-text-color'>
-								<?php the_field('why_subtext');?>
+								<?php the_field('overview_subtext');?>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-						<?php if( have_rows('why_points') ): ?>
-							<div class='row double-margin-top why-cards'>
-								<?php 
+			<div class='col-md-12'>
+				<div class='text-center'>
+					<img class='double-margin-top full-width' src='<?php the_field('overview_image');?>'>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class='anchor'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-lg-12'>
+				<h2 class='text-center margin-bottom bold-text'>
+					<?php the_field('why_title');?>
+				</h2>
+				<div class='row justify-content-center'>
+					<div class='col-lg-6'>
+						<p class='text-center body-large light-text-color'>
+							<?php the_field('why_subtext');?>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+					<?php if( have_rows('why_points') ): ?>
+						<div class='row double-margin-top why-cards'>
+							<?php 
 
-								while( have_rows('why_points') ): the_row(); 
+							while( have_rows('why_points') ): the_row(); 
 
-					// vars
-								$icon = get_sub_field('icon');
+				// vars
+							$icon = get_sub_field('icon');
 
-								$title = get_sub_field('title');
+							$title = get_sub_field('title');
 
-								$text = get_sub_field('text');
+							$text = get_sub_field('text');
 
-								?>
-									<div class='col-md-4'>
-										<div class='card elevation-2'>
-											<div class='card-body text-center'>
-												<img class='margin-bottom' src='<?php echo $icon; ?>' width='100px'>
-												<p class='body-large bold-font regular-font-name'>
-													<?php echo $title; ?>
-												</p>
-												<p class='light-text-color'>
-													<?php echo $text; ?>
-												</p>
-											</div>
+							?>
+								<div class='col-md-4'>
+									<div class='card elevation-2'>
+										<div class='card-body text-center'>
+											<img class='margin-bottom' src='<?php echo $icon; ?>' width='100px'>
+											<p class='body-large bold-font regular-font-name'>
+												<?php echo $title; ?>
+											</p>
+											<p class='light-text-color'>
+												<?php echo $text; ?>
+											</p>
 										</div>
 									</div>
+								</div>
 
-								<?php endwhile; ?>
-							</div>
-						<?php endif; ?>
+							<?php endwhile; ?>
+						</div>
+					<?php endif; ?>
 
 		</div>
 	</section>

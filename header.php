@@ -32,7 +32,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/bower_components/node_modules/bootstrap/dist/js/bootstrap.min.js">
   </script>
-
+  <meta property="og:image" content="<?php the_field('preview_image', 'option'); ?>">
+  <meta name="twitter:image" content="<?php the_field('preview_image', 'option'); ?>">
   <?php wp_head(); ?>
 
 </head>

@@ -79,14 +79,14 @@ Template Name: Pricing
 									</div>
 									<div class='card-body'>
 										<div class='account-options'>
-											<div class='text-center'>
+<!-- 											<div class='text-center'>
 												<h3 class='no-margin-bottom bold-font'>
 													<?php the_field('plus_card_body_title');?>
 												</h3>
 												<p class='body-font-name light-text-color'>
 													<?php the_field('plus_card_body_text');?>
 												</p>
-											</div>
+											</div> -->
 											<?php if( have_rows('plus_points') ): ?>
 												<?php 
 													while( have_rows('plus_points') ): the_row(); 
@@ -94,18 +94,26 @@ Template Name: Pricing
 													$icon = get_sub_field('icon');
 													$title = get_sub_field('title');
 													$text = get_sub_field('text');
+													$price = get_sub_field('price');
+													$color = get_sub_field('color');
 
 												?>
-													<div class='pricing-feature'>
-														<div class='media'>
-															<img class='mr-3' src='<?php echo $icon; ?>' width='30px'>
-															<div class='media-body'>
-																<p class='bold-font no-margin-bottom regular-font-name'>
+													<div class='pricing-feature padded'>
+														<div class='row'>
+															
+															<div class='col-lg-6'>
+																<p class='bold-font half-margin-bottom regular-font-name body-large' style="color:<?php echo $color; ?>;">
 																	<?php echo $title; ?>
 																</p>
-																<p class='light-text-color body-small no-margin-bottom'>
+																<p class='light-text-color body-small'>
 																	<?php echo $text; ?>
 																</p>
+																<h3 class='bold-font no-margin-bottom regular-font-name body-large'>
+																	$<?php echo $price; ?><span style="font-size:20px;">/month</span>
+																</h3>
+															</div>
+															<div class="col-lg-6">
+															<img class='img-fluid' src='<?php echo $icon; ?>' > 
 															</div>
 														</div>
 													</div>
@@ -113,7 +121,7 @@ Template Name: Pricing
 											<?php endif; ?>
 										</div>
 									</div>
-									<div class='card-footer no-styling'>
+<!-- 									<div class='card-footer no-styling'>
 										<div class="engagement-component media padded bordered">
 											<img class="engagement-button margin-right" src="<?php the_field('engagement_component_image', 'option'); ?>" width="40px">
 											<div class="media-body">
@@ -125,7 +133,7 @@ Template Name: Pricing
 												</p>
 											</div>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -142,6 +150,9 @@ Template Name: Pricing
 							<p class='body-large text-center'>
 								<?php the_field('how_is_it_free_text');?>
 							</p>
+							<a class='btn btn-lg btn-primary double-margin-top' href='<?php the_field('create_account_link', 'option'); ?>'>
+								Create account
+							</a>
 						</div>
 					</div>
 				</div>
