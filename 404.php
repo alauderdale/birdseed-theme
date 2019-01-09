@@ -7,36 +7,27 @@
 
 get_header(); ?>
 
-<?php $bannerLoop = new WP_Query( array( 'orderby' => 'rand', 'showposts' => 1, 'post_type' => 'page_banner') );
-while ( $bannerLoop->have_posts() ) : $bannerLoop->the_post(); ?>
 
 
-<section class='invert-section hero bg-cover' style='background-image:url(<?php the_field('banner_image'); ?>);'>
+<section>
 
-<?php endwhile;?>
-<?php wp_reset_postdata(); ?>
-  <div class='container'>
+  <div class='container double-margin-top'>
     <div class='row'>
       <div class='col-md-12 text-center'>
-        <h1>
-        Page Not Found
+        <h1 class="bold-font">
+        	Uh-oh!
         </h1>
+        <p class="light-text-color text-center double-margin-bottom">
+        	Somehting went wrong.
+    	</p>
+    	<a href="<?php bloginfo('url')?>" class="btn btn-primary btn-primary">
+		    Take me home
+		</a>
       </div>
     </div>
   </div>
 </section>
 
-	<section>
-	  <div class='container'>
-		  <div class="row">
-		    <div class='col-md-12 text-center'>
-		    	<a href="<?php bloginfo('url')?>" class="btn btn-primary btn-primary">
-		      		Take me home
-		      	</a>
-		    </div>
-		  </div>
-	  </div>
-	</section>
 
 
 

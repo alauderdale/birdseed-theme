@@ -71,7 +71,10 @@ Template Name: About
 											</br>
 											<?php the_field('phone_number', 'option'); ?>
 										</p>
-										<div class="engagement-component media padded bordered margin-bottom">
+										<a href="#" class="btn btn-lg margin-top btn-primary birdseed-link bsd-message">
+											Contact us
+										</a>
+<!-- 										<div class="engagement-component media padded bordered margin-bottom">
 											<img class="engagement-button margin-right" src="<?php the_field('engagement_component_image', 'option'); ?>" width="40px">
 											<div class="media-body">
 												<p class="primary-text-color no-margin-bottom bold-font body-small">
@@ -81,7 +84,7 @@ Template Name: About
 													<?php the_field('engagement_component_text_contact');?>
 												</p>
 											</div>
-										</div>
+										</div> -->
 									</div>
 									<div class='col-lg-7'>
 										<img class='max-width map-img' src='<?php the_field('map_image');?>'>
@@ -110,7 +113,10 @@ Template Name: About
 					<p class='body-large'>
 						<?php the_field('partner_text');?>
 					</p>
-					<div class="engagement-component media padded bordered margin-bottom margin-top">
+					<a href="#" class="btn btn-lg margin-top btn-light birdseed-link bsd-message">
+						Let's partner
+					</a>
+<!-- 					<div class="engagement-component media padded bordered margin-bottom margin-top">
 						<img class="engagement-button margin-right" src="<?php the_field('engagement_component_image', 'option'); ?>" width="40px">
 						<div class="media-body">
 							<p class="primary-text-color no-margin-bottom bold-font body-small">
@@ -120,7 +126,7 @@ Template Name: About
 								<?php the_field('engagement_component_text_partner');?>
 							</p>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

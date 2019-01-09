@@ -36,7 +36,7 @@ $(document).ready(function(){
 						<?php the_field('lead_text');?>
 					</p>
 					<div class='double-margin-top'>
-						<a class='btn btn-lg btn-primary margin-right' href='<?php the_field('primary_button_link');?>'>
+						<a class='btn btn-lg btn-primary btn-shadow margin-right' href='<?php the_field('primary_button_link');?>'>
 							<?php the_field('primary_button_text');?>
 						</a>
 						<button class='btn btn-lg btn-light' data-src='<?php the_field('video_url');?>' data-target='#homeVideoModal' data-toggle='modal' type='button'>
