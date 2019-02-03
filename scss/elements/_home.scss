@@ -51,20 +51,43 @@
 
 .why-cards{
 	.card{
-		min-height:384px;
+		min-height:470px;
 		@include breakpoint(lg) {
-			min-height:442px;
+			min-height:500px;
 		}
 		@include breakpoint(md) {
-			min-height:585px;
+			min-height:555px;
 		}
 		@include breakpoint(sm) {
 			min-height:auto;
 			margin-bottom:$baseline*2;
 		}
 
+		.card-footer{
+			border:none;
+			background-color: tint($off-white-color,50%);
+		}
+		.tools-list{
+			display: flex;
+			text-align:center;
+			.tool{
+				display: inline;
+				margin-right:16px;
+				&:last-of-type{
+					margin-right: 0;
+				}
+				.tool-img{
+					margin-bottom:5px;
+				}
+			}
+		}
+
+
 	}
 }
+
+
+
 
 
 

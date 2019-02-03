@@ -160,3 +160,17 @@ a{
 		}
 	}
 }
+
+
+.btn-group-toggle{
+	.btn{
+		font-size: 14px;
+		padding-left:10px;
+		padding-right:10px;
+		min-width: 150px!important;
+		.save{
+			opacity: .9;
+			font-size: 12px;
+		}
+	}
+}

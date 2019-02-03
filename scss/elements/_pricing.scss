@@ -48,12 +48,36 @@ ul.pricing-list{
 }
 
 .pricing-feature{
-	p{
-		&.body-large{
-			line-height: 23px;
+	border:3px solid $border-color;
+	margin-bottom:$baseline;
+	padding:$baseline;
+	padding-bottom: 0px;
+
+	ul{
+		li{
+			i{
+				color: #5BA7FF!important;
+			}
+			p{
+				font-size: 16px;
+			}
 		}
 	}
+	.price{
+		font-size: 30px;
+	}
 }
+
+//upfrade price things
+
+.upgrade-price{
+	display: none;
+	&.shown{
+		display: block;
+	}
+}
+
+
 
 ///make pricing panels smaller on md size
 @include breakpoint(md) {
@@ -76,15 +100,12 @@ ul.pricing-list{
 					}
 				}
 				.pricing-feature{
-					text-align: center;
-					p{
-						&.body-small{
-							font-size:12px;
-							line-height:16px;
+					ul{
+						li{
+							p{
+								font-size: 10px;
+							}
 						}
-					}
-					img{
-						width:150px;
 					}
 				}
 			}
@@ -95,11 +116,19 @@ ul.pricing-list{
 	}
 }
 
-.pricing-feature{
-	background:$off-white-color;
-	margin-bottom:$baseline;
-	padding:$baseline;
+@include breakpoint(sm) {
+				.pricing-feature{
+					ul{
+						li{
+							p{
+								font-size: 12px!important;
+							}
+						}
+					}
+				}
 }
+
+
 
 .price-indicator{
 	position:relative;

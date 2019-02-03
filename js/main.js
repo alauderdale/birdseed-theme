@@ -2,6 +2,16 @@
 
 $(document).ready(function(){
 
+  $( ".monthly-toggle" ).click(function() {
+        $( ".monthly" ).addClass( "shown" );
+        $( ".annually" ).removeClass( "shown" );
+    });
+
+  $( ".annual-toggle" ).click(function() {
+        $( ".annually" ).addClass( "shown" );
+        $( ".monthly" ).removeClass( "shown" );
+    });
+
 	$( ".menu-button" ).click(function() {
         $( "html" ).toggleClass( "nav-open" );
     });

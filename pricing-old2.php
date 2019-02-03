@@ -77,111 +77,41 @@ Template Name: Pricing
 											<?php the_field('plus_card_header_text');?>
 										</p>
 									</div>
-									<div class='card-body padding-top'>
-										<div class="row">
-											<div class='col text-center margin-bottom'>
-												<div class="btn-group btn-group-toggle" data-toggle="buttons">
-													<label class="btn btn-secondary monthly-toggle active">
-														<input type="radio" name="options" id="option2" autocomplete="off"> Monthly
-													</label>
-													<label class="btn btn-secondary annual-toggle">
-														<input type="radio" name="options" id="option1" autocomplete="off" checked>	Yearly <span class="save">(Save 25%)</span>
-													</label>
-												</div>
-											</div>
-										</div>
+									<div class='card-body'>
 										<div class='account-options'>
-											<div class='pricing-feature padded'>
-												<div class="row">
-													<div class='col text-center'>
-														<h5 class="no-margin-bottom"><?php the_field('plus_title');?></h5>
-														<div class="upgrade-price monthly shown">
-															<p class="quarter-margin-bottom">
-																<span class="price"><?php the_field('plus_price_monthly');?></span>/mo
-															</p>
-														</div>
-														<div class="upgrade-price annually">
-															<p class="quarter-margin-bottom">
-																<span class="price"><?php the_field('plus_price_annual');?></span>/mo
-															</p>
-														</div>
-													</div>
-												</div>
-												<div class='row align-items-center'>
-													<div class='col-7'>
-														<?php if( have_rows('plus_points') ): ?>
-															<ul class='list-unstyled pricing-list'>
-																<?php 
 
-																while( have_rows('plus_points') ): the_row(); 
-
+											<?php if( have_rows('plus_points') ): ?>
+												<?php 
+													while( have_rows('plus_points') ): the_row(); 
 													// vars
-																$text = get_sub_field('point');
+													$icon = get_sub_field('icon');
+													$title = get_sub_field('title');
+													$text = get_sub_field('text');
+													$price = get_sub_field('price');
+													$color = get_sub_field('color');
 
-																?>
-																	<li>
-																		<p>
-																			<i class='material-icons primary-text-color'>
-																				check
-																			</i>
-																			<?php echo $text; ?>
-																		</p>
-																	</li>
-																<?php endwhile; ?>
-															</ul>
-														<?php endif; ?>
-													</div>
-													<div class="col-5">
-														<img class='img-fluid ' src='<?php the_field('plus_image');?>' > 
-													</div>
-												</div>
-											</div><!-- end pricing feature -->
-											<div class='pricing-feature padded'>
-												<div class="row">
-													<div class='col text-center'>
-														<h5 class="no-margin-bottom"><?php the_field('pro_title');?></h5>
-														<div class="upgrade-price monthly shown">
-															<p class="quarter-margin-bottom">
-																<span class="price"><?php the_field('pro_price_monthly');?></span>/mo
-															</p>
-														</div>
-														<div class="upgrade-price annually">
-															<p class="quarter-margin-bottom">
-																<span class="price"><?php the_field('pro_price_annual');?></span>/mo
-															</p>
+												?>
+													<div class='pricing-feature padded'>
+														<div class='row'>
+															
+															<div class='col-lg-6'>
+																<p class='bold-font half-margin-bottom regular-font-name body-large' style="color:<?php echo $color; ?>;">
+																	<?php echo $title; ?>
+																</p>
+																<p class='light-text-color body-small'>
+																	<?php echo $text; ?>
+																</p>
+																<h4 class='bold-font no-margin-bottom regular-font-name '>
+																	$<?php echo $price; ?><span style="font-size:20px;">/month</span>
+																</h4>
+															</div>
+															<div class="col-lg-6">
+															<img class='img-fluid' src='<?php echo $icon; ?>' > 
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class='row align-items-center'>
-													<div class='col-7'>
-														<?php if( have_rows('pro_points') ): ?>
-															<ul class='list-unstyled pricing-list'>
-																<?php 
-
-																while( have_rows('pro_points') ): the_row(); 
-
-													// vars
-																$text = get_sub_field('point');
-
-																?>
-																	<li>
-																		<p>
-																			<i class='material-icons primary-text-color'>
-																				check
-																			</i>
-																			<?php echo $text; ?>
-																		</p>
-																	</li>
-																<?php endwhile; ?>
-															</ul>
-														<?php endif; ?>
-													</div>
-													<div class="col-5">
-														<img class='img-fluid ' src='<?php the_field('pro_image');?>' > 
-													</div>
-												</div>
-											</div><!-- end pricing feature -->
-
+												<?php endwhile; ?>
+											<?php endif; ?>
 										</div>
 									</div>
 <!-- 									<div class='card-footer no-styling'>

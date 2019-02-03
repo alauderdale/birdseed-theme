@@ -106,8 +106,8 @@ $(document).ready(function(){
 							$text = get_sub_field('text');
 
 							?>
-								<div class='col-md-4'>
-									<div class='card elevation-2'>
+								<div class='col-md-6'>
+									<div class='card elevation-2 double-margin-bottom'>
 										<div class='card-body text-center'>
 											<img class='margin-bottom' src='<?php echo $icon; ?>' width='100px'>
 											<p class='body-large bold-font regular-font-name'>
@@ -117,9 +117,35 @@ $(document).ready(function(){
 												<?php echo $text; ?>
 											</p>
 										</div>
+										<div class="card-footer">
+											<h6 class="margin-bottom text-center bold-text light-text-color">That's why you need:</h6>
+											<?php if( have_rows('tools') ): ?>
+												<div class="tools-list justify-content-center">
+													<?php 
+
+														while( have_rows('tools') ): the_row(); 
+
+											// vars
+														$icon = get_sub_field('icon');
+
+														$title = get_sub_field('title');
+
+
+													?>
+														<div class="tool text-center">
+															<div class="tool-img">
+																<img width="60px" src="<?php echo $icon; ?>"/>
+															</div>
+															<p class="body-small tool-text light-text-color">
+																<?php echo $title; ?>
+															</p>
+														</div>
+													<?php endwhile; ?>
+												</div>
+											<?php endif; ?>
+										</div>
 									</div>
 								</div>
-
 							<?php endwhile; ?>
 						</div>
 					<?php endif; ?>
