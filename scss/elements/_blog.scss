@@ -73,6 +73,9 @@ $base-blog-line-height: 21pt;
 		padding:10px;
 		display:inline-block;
 		.blog-thumb{
+			@include breakpoint(sm) {
+			width: 100%;
+		}
 			@include transition-duration(.2s);
 			vertical-align:top;
 			display:inline-block;
@@ -81,11 +84,30 @@ $base-blog-line-height: 21pt;
 			}
 			p{
 				color:$light-text-color!important;
+				&.text-color{
+					color: $text-color!important;
+				}
 			}
 			&:hover{
 				// transform: translate(0,-10px);
 	   //  		transition-delay: 0s !important;
 			}
 		}
+		@include breakpoint(sm) {
+			width: 100%;
+		}
 	}
+
+
+a.video-thumb-container{
+	display: inline-block;
+	width:100%;
+	padding:10px;
+	.video{
+		width:100%;
+		min-height: 410px;
+		vertical-align:top;
+			display:inline-block;
+	}
+}
 

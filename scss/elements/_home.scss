@@ -171,12 +171,23 @@
 			@include transition-duration(.2s);
 			opacity:.8;
 			margin-bottom:5px;
+			border:2px solid transparent;
 		}
-		&:hover, &.active{
-			color:$dark-text-color;
-			background:transparent;
+		&:hover{
 			img{
 				opacity:1;
+				border:2px solid rgba(0,0,0,.2);
+				border-radius:100px;
+			}		
+		}
+		&.active{
+			color:$dark-text-color;
+			background:transparent;
+			font-weight: bold;
+			img{
+				opacity:1;
+				border:2px solid rgba(0,0,0,.2);
+				border-radius:100px;
 			}
 		}
 		@include breakpoint(md) {

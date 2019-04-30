@@ -81,10 +81,16 @@ get_header(); ?>
 														<?php the_title();?>
 													</h5>
 													<p class="body-small half-margin-bottom">
-														<?php
-															$category = get_the_category(); 
-															echo $category[0]->cat_name;
-														?>
+														
+														 <?php the_date();?>
+														
+														|
+														
+															<?php
+																$category = get_the_category(); 
+																echo $category[0]->cat_name;
+															?>
+														
 													</p>
 													<?php the_excerpt();?>
 													<div class='text-left'>

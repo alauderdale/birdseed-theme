@@ -8,8 +8,8 @@ Template Name: Home
 
 <script>
 $(document).ready(function(){
-  $("#ToolsSLider .carousel-inner .carousel-item:first").addClass("active");
-  $("#ToolsSLider .carousel-indicators .tool-icon:first").addClass("active");
+  $("#ToolsSLider .carousel-inner .carousel-item:nth-child(7)").addClass("active");
+  $("#ToolsSLider .carousel-indicators .tool-icon:nth-child(7)").addClass("active");
 });
 </script>
 
@@ -21,7 +21,36 @@ $(document).ready(function(){
 </script>
 
 
+<style type="text/css">
+	
+#intro h1{
+	font-size:<?php the_field('intro_font_size_lg');?>;
+	line-height:<?php the_field('intro_line_height_lg');?>;
+}
 
+/*md*/
+@media (max-width: 992px) {
+
+	#intro h1{
+		font-size:<?php the_field('intro_font_size_md');?>;
+		line-height:<?php the_field('intro_line_height_md');?>;
+	}
+
+}
+
+/*sm*/
+@media (max-width: 768px) {
+
+	#intro h1{
+		font-size:<?php the_field('intro_font_size_sm');?>;
+		line-height:<?php the_field('intro_line_height_sm');?>;
+	}
+
+}
+
+
+
+</style>
 
 
 <div id='main'>
@@ -154,7 +183,7 @@ $(document).ready(function(){
 	</section>
 	<section id='tools'>
 		<div class='d-none d-lg-inline d-md-inline'>
-			<div class='carousel slide carousel-fade tools-slider hover-slider' data-interval='6000' data-ride='carousel' id='ToolsSLider'>
+			<div class='carousel slide carousel-fade tools-slider hover-slider' data-interval='false' data-ride='false' id='ToolsSLider' >
 				<div class='text-center tools-text'>
 					<h2 class='text-center margin-bottom bold-font'>
 						<?php the_field('tools_title');?>
@@ -291,7 +320,7 @@ $(document).ready(function(){
 		<div class='container'>
 			<div class='row'>
 				<div class='col-lg-12'>
-					<div class='carousel slide carousel-fade how-slider' data-interval='6000' data-ride='carousel' id='howSlider'>
+					<div class='carousel slide carousel-fade how-slider' data-interval='6000' data-ride='carousel' id='howSlider' >
 						<div class='carousel-inner'>
 							<div class='row'>
 								<div class='col-md-7'>

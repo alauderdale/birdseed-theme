@@ -158,6 +158,10 @@ Template Name: About
 											<?php the_title();?>
 										</p>
 									</a>
+									<p class="light-text-color body-small">
+										<?php the_date();?>
+											
+									</p>
 									<a class='btn btn-link no-padding-left text-left' href='<?php the_permalink();?>'>
 										Read the article
 										<i class='material-icons'>

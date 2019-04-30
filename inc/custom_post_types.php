@@ -40,6 +40,16 @@ function create_my_post_types() {
       'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' )
     );
     register_post_type( 'resources', $port_args );
+
+
+        //practice areas
+    $port_args = array(
+      'public' => true,
+      'label'  => 'Videos',
+      'taxonomies' => array('category'), 
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' )
+    );
+    register_post_type( 'videos', $port_args );
     
 
 }
