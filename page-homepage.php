@@ -296,9 +296,15 @@ $(document).ready(function(){
 			<div class='row'>
 				<div class='col-lg-12'>
 					<div class='text-center double-margin-top'>
-						<a class='btn btn-lg btn-primary' href='<?php the_field('get_started_page', 'option'); ?>'>
+						<a class='btn btn-lg btn-primary margin-right' href='<?php the_field('get_started_page', 'option'); ?>'>
 							<?php the_field('get_started_text', 'option'); ?>
 						</a>
+						<button class='btn btn-lg btn-light' data-src='<?php the_field('tools_video_url');?>' data-target='#toolsVideoModal' data-toggle='modal' type='button'>
+							<i class='material-icons' style='font-size: 30px; top:9px; margin-top: -14px;'>
+								play_circle_outline
+							</i>
+							<?php the_field('tools_video_button_text');?>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -377,6 +383,20 @@ $(document).ready(function(){
 					</button>
 					<div class='embed-responsive embed-responsive-16by9'>
 						<iframe allowscriptaccess='always' class='embed-responsive-item' id='video' src='<?php the_field('video_url');?>'></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade video-modal' id='toolsVideoModal' role='dialog' tabindex='-1'>
+		<div class='modal-dialog' role='document'>
+			<div class='modal-content'>
+				<div class='modal-body'>
+					<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+						<span aria-hidden='true'>×</span>
+					</button>
+					<div class='embed-responsive embed-responsive-16by9'>
+						<iframe allowscriptaccess='always' class='embed-responsive-item' id='video' src='<?php the_field('tools_video_url');?>'></iframe>
 					</div>
 				</div>
 			</div>
