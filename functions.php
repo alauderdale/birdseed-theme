@@ -141,6 +141,8 @@ function boiler_scripts_styles() {
 
 	wp_enqueue_script( 'boiler-main', get_template_directory_uri() . '/js/main.js', array(), '20120205', true );
 
+	wp_enqueue_script( 'swipe-slider', get_template_directory_uri() . '/bower_components/swiper/dist/js/swiper.min.js', array(), '20120205', true );
+
 	// wp_enqueue_script( 'boiler-main', get_template_directory_uri() . '/js/lib/menu_button.js', array(), '20120205', true );
 
 

@@ -1,3 +1,11 @@
+section.home-hero{
+	padding-top:$baseline*8;
+	@include breakpoint(sm) {
+		padding-top:40px;
+	}
+}
+
+
 .main-hero{
 	padding-top:$baseline*10;
 	background: url("../images/main-header-bg.svg") no-repeat top right;
@@ -13,10 +21,10 @@
 		}
 	}
 	@include breakpoint(md) {
+		text-align:center;
 		background-position-x:400px;
 		img.hero-img{
-			width:420px;
-			left:10px;
+			max-width:400px;
 		}
 		.btn{
 			margin:0!important;

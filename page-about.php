@@ -71,7 +71,7 @@ Template Name: About
 											</br>
 											<?php the_field('phone_number', 'option'); ?>
 										</p>
-										<a href="#" class="btn btn-lg margin-top btn-primary birdseed-link bsd-message">
+										<a href="#bsd-contact-form" class="btn btn-lg margin-top btn-primary birdseed-link bsd-message">
 											Contact us
 										</a>
 <!-- 										<div class="engagement-component media padded bordered margin-bottom">
@@ -113,7 +113,7 @@ Template Name: About
 					<p class='body-large'>
 						<?php the_field('partner_text');?>
 					</p>
-					<a href="#" class="btn btn-lg margin-top btn-light birdseed-link bsd-message">
+					<a href="#bsd-contact-form" class="btn btn-lg margin-top btn-light birdseed-link bsd-message">
 						Let's partner
 					</a>
 <!-- 					<div class="engagement-component media padded bordered margin-bottom margin-top">
