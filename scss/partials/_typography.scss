@@ -259,6 +259,64 @@ p.body-small{
 
 
 
+
+
+//highlights
+
+
+@keyframes stretchWidth{
+  from{width:0;}
+  to{width:calc(103%);}
+}
+
+
+.highlighter{
+  display: inline-flex;
+  position:relative;
+  &:before{
+    content: ' ';
+    background: $primary-color;
+    position: absolute;
+    width:0;
+    opacity: .3;
+    height: .45em;
+    z-index: -1;
+    top: .875em;
+    left: -2px;
+    right: -2px;
+    bottom: auto;
+    box-sizing: border-box;
+
+  }
+
+}
+
+.showit{
+  &:nth-child(1){
+    &:before{
+      -webkit-animation-delay: .2s;
+      animation-delay: .2s;
+    }
+  }
+  &:nth-child(2){
+    &:before{
+      -webkit-animation-delay: .6s;
+      animation-delay: .6s;
+    }
+  }
+  &:before{
+
+    -webkit-animation: stretchWidth .55s ease-in-out forwards;
+    animation: stretchWidth .55s ease-in-out forwards;      
+  }
+
+}
+
+
+
+
+
+
 //mobile
 
   @include breakpoint(md) {
@@ -271,3 +329,8 @@ p.body-small{
 
 
   }
+
+
+
+
+

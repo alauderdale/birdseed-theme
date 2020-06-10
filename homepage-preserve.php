@@ -58,8 +58,8 @@ $(document).ready(function(){
 <div id='main'>
 	<section class='home-hero ' id='intro'>
 		<div class='container'>
-			<div class='row ' >
-				<div class='col-12 text-center margin-bottom'>
+			<div class='row'>
+				<div class='col-xl-6 col-lg-7 col-md-12 order-2 order-lg-1 '>
 					<h1 class='double-margin-bottom bold-font'>
 						<?php the_field('title_text');?>
 					</h1>
@@ -78,7 +78,7 @@ $(document).ready(function(){
 						</button>
 					</div>
 				</div>
-				<div class='col-12'>
+				<div class='col-xl-6 col-lg-5 col-md-12  d-md-block order-1 order-lg-2'>
 					<img class='margin-auto full-width hero-img' src='<?php the_field('hero_image');?>' >
 				</div>
 			</div>
