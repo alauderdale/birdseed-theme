@@ -78,7 +78,7 @@
       </div>
     </div>
     <nav class='navbar fixed-top navbar-expand-sm navbar-page-top' id='primary-nav'>
-      <div class='container-fluid'>
+      <div class='container'>
         <a class='navbar-brand' href='<?php bloginfo('url')?>'>
           <img src='<?php the_field('logo', 'option'); ?>' width='190px'>
         </a>

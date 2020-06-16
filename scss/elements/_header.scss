@@ -64,6 +64,7 @@
 				@include transition-duration(.2s);
 				&.sign-in{
 					margin-right:20px;
+					color:$text-color;
 				}
 			}
 			.dropdown-menu{
@@ -99,14 +100,6 @@
 	&.navbar-page-top{
 		background:transparent;
 		box-shadow:none;
-		a.sign-in{
-			color:white;
-		}
-		.create-account-button{
-			background:white;
-			color:$primary-color;
-			border:none;
-		}
 		@include breakpoint(md) {
 			background:white;
 		}

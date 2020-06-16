@@ -114,13 +114,13 @@ a{
 	}
 	//white btn
 	&.btn-light{
-		color:$link-color;
-		box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10), 0 2px 4px 0 rgba(0,0,0,0.04);
+		color:$text-color;
+		// box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10), 0 2px 4px 0 rgba(0,0,0,0.04);
 		background:#fff;
-		border:none;
+		border:1px solid $text-color;
 		&:hover{
 			background:$off-white-color;
-			border:none;
+			border-color:shade($text-color,90%);
 		}
 	}
 	&.btn-shadow{

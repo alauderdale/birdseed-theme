@@ -97,277 +97,108 @@ section.home-hero{
 	}
 }
 
-
-
-
-
-
-#tools{
+.tools-slider-wrapper{
+	padding-top:$baseline*9;
 	@include breakpoint(sm) {
-		padding-top:0;
+		padding-top:$baseline*4;
 	}
 }
+
 
 .tools-slider{
+	.carousel-indicators{
+		position:relative;
+		bottom:0;
+		margin: 0;
+		display: block;
+	}
+	.tool-controls{
+
+		.tool-section{
+			padding:$baseline $baseline*1.5;
+			margin:$baseline/2 0;
+			border-radius: $base-border-radius;
+			transition-duration: .2s;
+			cursor: pointer;
+			&.active{
+				background:$off-white-color;
+				padding:$baseline*1.5;
+				.tool-title{
+					margin-bottom:$baseline;
+				}
+				.tool-description{
+					display: block;
+				}
+			}
+			&:hover{
+				background:$off-white-color;
+			}
+			.tool-title{
+				border-bottom:1px solid $primary-color;
+				display: inline-block;
+				line-height: 1.7em;
+				margin-bottom:0;
+			}
+			.tool-description{
+					display: none;
+				}
+		}
+	}
+	.slides{
+		margin-top: $baseline*4;
+		@include breakpoint(sm) {
+			margin-top: $baseline;
+			display: none;
+		}
+	}
+}
+
+
+//features
+
+.feature-card{
 	position:relative;
-	.tools-text{
+	padding:$baseline*2;
+	padding-top:$baseline*3;
+	background: #FFFFFF;
+	box-shadow: 0 24px 39px 0 rgba(0,0,0,0.12);
+	border-radius: $base-border-radius;
+	text-align: center;
+	margin:$baseline*1.5 0;
+	.featured-card-check{
 		position:absolute;
-		top:60px;
-		z-index:800;
-		width:100%;
-		color:white;
+		margin: auto;
+		top:-16px;
+		left:0;
+		right:0;
 	}
-	.carousel-inner{
-		margin:0 auto;
-		position:relative;
-		overflow:visible;
-		.carousel-item{
-			background: url("../images/bg-tools-accent-primary.svg") no-repeat center top;
-			background-size:100%;
-			padding-top:180px;
-			background-position-y:-200px;
-			@include breakpoint(lg) {
-				background-position-y:-100px;
-			}
-			@include breakpoint(md) {
-				background-position-y:-50px;
-			}
-			@media (min-width : 1729px) {
-				background-position-y:-400px;
-			}
+	&.coming-soon{
+
+		&:after{
+			content:"COMING SOON";
+			font-size: 11px;
+			line-height: 11px;
+			background:#C3CBE1;
+			padding:5px;
+			border-radius:100px;
+			position:absolute;
+			font-family:$regular-font-name;
+			margin:auto;
+			top:25px;
+			left:calc(50% - 47.5px);
+			text-align: center;
+			color:white;
+			font-weight:800;
 
 		}
-		.carousel-caption{
-			top:100px;
-			@include breakpoint(md) {
-
-			}
-			p{
-				padding:5px 20px;
-				background:$primary-color;
-				border-radius:100px;
-				text-align:center;
-				display:inline-flex;
-				font-size:14px;
-			}
-		}
-		.img-container{
-			position:relative;
-			padding-bottom:40px;
-			max-width:300px;
-			text-align:center;
-			margin:0 auto;
-			@include breakpoint(lg) {
-				max-width:270px;
-			}
-			@include breakpoint(md) {
-				max-width:260px;
-			}
-		}
-	}
 
 
-	.carousel-indicators, .tool-slider-indicators{
-		position:relative;
-		width:100%;
-		margin:0 auto;
-	}
-
-	.tool-icon{
-		text-align:center;
-		cursor:pointer;
-		@include transition-duration(.2s);
-		color:$light-text-color;
-		img{
-			@include transition-duration(.2s);
-			opacity:.8;
-			margin-bottom:5px;
-			border:2px solid transparent;
-		}
-		&:hover{
-			img{
-				opacity:1;
-				border:2px solid rgba(0,0,0,.2);
-				border-radius:100px;
-			}		
-		}
-		&.active{
-			color:$dark-text-color;
-			background:transparent;
-			font-weight: bold;
-			img{
-				opacity:1;
-				border:2px solid rgba(0,0,0,.2);
-				border-radius:100px;
-			}
-		}
-		@include breakpoint(md) {
-			img{
-				width:50px;
-			}
-		}
-	}
-}
-
-///position carousel indicators for tools slider
-$tool-indicator-width: 130px;
-$tool-indicator-height: 120px;
-$tool-indicator-padding: 0px;
-$tool-indicator-top-position : -350px;
-$tool-indicator-start-position-right-left: -10px;
-//lg breakpoint modifiers
-$tool-indicator-start-position-right-left-lg: -65px;
-
-//me breakpoint modifiers
-$tool-indicator-width-md: 90px;
-$tool-indicator-start-position-right-left-md: -90px;
-
-
-
-.tools-slider .tool-icon{
-	position:absolute;
-	right:0px;
-	bottom:0;
-	width:$tool-indicator-width;
-	height:$tool-indicator-height;
-	@include breakpoint(md) {
-		p{
-			 width: 80px;
-			 text-align:center;
-			 margin:0 auto;
-			 font-size:13px;
-		}
-	}
-
-
-	&:nth-child(1), &:nth-child(2), &:nth-child(3){
-		top:$tool-indicator-top-position;
-	}
-	&:nth-child(1){
-		right:$tool-indicator-start-position-right-left;
-		@include breakpoint(lg) {
-			right:$tool-indicator-start-position-right-left-lg;
-		}
-		@include breakpoint(md) {
-			right:$tool-indicator-start-position-right-left-md;
-		}
-	}
-	&:nth-child(2){
-		right:$tool-indicator-start-position-right-left + $tool-indicator-width;
-		@include breakpoint(lg) {
-			right:$tool-indicator-start-position-right-left-lg + $tool-indicator-width;
-		}
-		@include breakpoint(md) {
-			right:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md;
-		}
-	}
-	&:nth-child(3){
-		right:$tool-indicator-start-position-right-left + $tool-indicator-width*2 ;
-		@include breakpoint(lg) {
-			right:$tool-indicator-start-position-right-left-lg + $tool-indicator-width*2;
-		}
-		@include breakpoint(md) {
-			right:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md*2;
-		}
-	}
-
-	&:nth-child(4), &:nth-child(5), &:nth-child(6){
-		top:$tool-indicator-top-position  + $tool-indicator-height;
-	}
-
-	&:nth-child(4){
-		right:$tool-indicator-start-position-right-left;
-		@include breakpoint(lg) {
-			right:$tool-indicator-start-position-right-left-lg;
-		}
-		@include breakpoint(md) {
-			right:$tool-indicator-start-position-right-left-md;
-		}
-	}
-	&:nth-child(5){
-		right:$tool-indicator-start-position-right-left + $tool-indicator-width;
-		@include breakpoint(lg) {
-			right:$tool-indicator-start-position-right-left-lg + $tool-indicator-width;
-		}
-		@include breakpoint(md) {
-			right:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md;
-		}
-	}
-	&:nth-child(6){
-		right:$tool-indicator-start-position-right-left + $tool-indicator-width*2 ;
-		@include breakpoint(lg) {
-			right:$tool-indicator-start-position-right-left-lg + $tool-indicator-width*2;
-		}
-		@include breakpoint(md) {
-			right:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md*2;
-		}
-	}
-
-	&:nth-child(7), &:nth-child(8), &:nth-child(9){
-		top:$tool-indicator-top-position ;
-	}
-	&:nth-child(7){
-		left:$tool-indicator-start-position-right-left;
-		@include breakpoint(lg) {
-			left:$tool-indicator-start-position-right-left-lg;
-		}
-		@include breakpoint(md) {
-			left:$tool-indicator-start-position-right-left-md;
-		}
-	}
-	&:nth-child(8){
-		left:$tool-indicator-start-position-right-left + $tool-indicator-width;
-		@include breakpoint(lg) {
-			left:$tool-indicator-start-position-right-left-lg + $tool-indicator-width;
-		}
-		@include breakpoint(md) {
-			left:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md;
-		}
-	}
-	&:nth-child(9){
-		left:$tool-indicator-start-position-right-left + $tool-indicator-width*2;
-		@include breakpoint(lg) {
-			left:$tool-indicator-start-position-right-left-lg + $tool-indicator-width*2;
-		}
-		@include breakpoint(md) {
-			left:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md*2;
-		}
-	}
-
-	&:nth-child(10), &:nth-child(11), &:nth-child(12){
-		top:$tool-indicator-top-position  + $tool-indicator-height;
-	}
-
-	&:nth-child(10){
-		left:$tool-indicator-start-position-right-left;
-		@include breakpoint(lg) {
-			left:$tool-indicator-start-position-right-left-lg;
-		}
-		@include breakpoint(md) {
-			left:$tool-indicator-start-position-right-left-md;
-		}
-	}
-	&:nth-child(11){
-		left:$tool-indicator-start-position-right-left + $tool-indicator-width;
-		@include breakpoint(lg) {
-			left:$tool-indicator-start-position-right-left-lg + $tool-indicator-width;
-		}
-		@include breakpoint(md) {
-			left:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md;
-		}
-	}
-	&:nth-child(12){
-		left:$tool-indicator-start-position-right-left + $tool-indicator-width*2;
-		@include breakpoint(lg) {
-			left:$tool-indicator-start-position-right-left-lg + $tool-indicator-width*2;
-		}
-		@include breakpoint(md) {
-			left:$tool-indicator-start-position-right-left-md + $tool-indicator-width-md*2;
-		}
 	}
 
 }
 
+
+//how it works
 
 
 #howSlider{
