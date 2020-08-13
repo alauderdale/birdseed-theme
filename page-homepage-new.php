@@ -25,7 +25,7 @@ $(document).ready(function(){
 <style type="text/css">
 	
 #intro h1{
-	font-size: 61px;
+	font-size: 73px;
 	font-size:<?php the_field('intro_font_size_lg');?>;
 	line-height:<?php the_field('intro_line_height_lg');?>;
 }
@@ -201,6 +201,16 @@ $(document).ready(function(){
 				</div>
 			<?php endwhile; ?>
 		<?php endif; ?>
+
+
+		<div class="container">
+			<div class="row d-none d-sm-block">
+				<div class="col">
+					<img class="featured-card-check" src="<?php bloginfo('template_url'); ?>/images/guide-1.svg">
+				</div>
+			</div>
+			
+		</div>
 
 <!-- end section -->
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="101px" viewBox="0 0 77 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="AppSumo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Billing---basic-plan" transform="translate(-548.000000, -141.000000)">
+            <g id="Group" transform="translate(548.000000, 141.000000)">
+                <g id="Group-43" transform="translate(3.000000, 0.000000)">
+                    <circle id="Oval" fill="#0042FF" cx="36" cy="36" r="36"></circle>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="10.8" points="17.5580453 36 34.1749001 49.4787686 53.920937 21.7390362"></polyline>
+                </g>
+                <path d="M37.05556,101 C24.9234905,101 13.558109,95.5716839 3.25689023,84.8630676 L0,81.4780122 L6.45857894,74.6371112 L9.71853592,78.0253843 C18.2962402,86.944941 27.4934284,91.5237755 37.2702326,91.372542 C54.0852318,91.2599213 67.1127927,77.5652485 67.2446631,77.4236682 L70.4524853,74 L77,80.7154094 L73.8044448,84.1519485 C73.172694,84.834108 58.0873427,100.813371 37.4205034,101 C37.3009001,101 37.17823,101 37.05556,101" id="Fill-1" fill="#0042FF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

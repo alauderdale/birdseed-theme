@@ -29,8 +29,8 @@ Template Name: Pricing
 				</div>
 			</div>
 			<div class='row justify-content-center double-margin-top padding-bottom'>
-				<div class='col-lg-4 col-xl-4 col-md-6 col-12'>
-					<ul class='list-unstyled pricing-list bordered-list list-lg'>
+				<div class='col-lg-4 col-xl-4 col-md-6 col-6'>
+					<ul class='list-unstyled pricing-list list-lg'>
 						<?php if( have_rows('price_points') ): ?>
 							<?php 
 								while( have_rows('price_points') ): the_row(); 
@@ -50,8 +50,8 @@ Template Name: Pricing
 						<?php endif; ?>
 					</ul>
 				</div>
-				<div class='col-lg-4 col-xl-4 col-md-6 col-12'>
-					<ul class='list-unstyled pricing-list bordered-list list-lg'>
+				<div class='col-lg-4 col-xl-4 col-md-6 col-6'>
+					<ul class='list-unstyled pricing-list list-lg'>
 						<?php if( have_rows('price_points_2') ): ?>
 							<?php 
 								while( have_rows('price_points_2') ): the_row(); 
@@ -75,18 +75,12 @@ Template Name: Pricing
 			<div class='row justify-content-center double-margin-top text-center'>
 				<div class="col">
 					<a href="<?php the_field('create_account_link', 'option'); ?>" class="btn btn-primary btn-lg">
-						Get started - 14 days totally free
+						Get started — Free forever
 					</a>
-					<p class="half-margin-top no-margin-bottom">(No credit card required)</p>
 				</div>
 			</div>
 			<div class='row justify-content-center double-margin-top text-center'>
 				<div class="col-md-8">
-					<div class="margin-bottom">
-						<button class='btn btn-lg btn-light' data-src='<?php the_field('video_url');?>' data-target='#priceVideoModal' data-toggle='modal' type='button'>
-						<img class="max-width" width="248px" src="<?php the_field('price_explain_img');?>"/>
-						</button>
-					</div>
 					<div class="double-margin-top">
 						<p class="body-small text-center regular-font-name">
 							<span class="extra-bold-font">
@@ -106,18 +100,101 @@ Template Name: Pricing
 					<h2 class='text-center margin-bottom bold-font'>
 						<?php the_field('panels_title');?>
 					</h2>
-					<h4 class='text-center body-large'>		
+					<p class='text-center body-large'>		
 						<?php the_field('panels_lead');?>
-					</h4>
+					</p>
 				</div>
 			</div>
 			<div class="row justify-content-center margin-top">
-				<div class="col-md-9 col-lg-6">
+				<div class="col-md-12 col-xl-9 col-lg-10">
 					<div class='card-deck pricing-card-deck'>
 						<div class='card elevation-1'>
-							<div class='card-body' style='border-color:<?php the_field('pro_color');?>'>
+							<div class='card-body' style='border-color:<?php the_field('plus_color');?>'>
+								<div class="plan-img">
+									<img width="127px" src="<?php the_field('plus_image');?>"/>
+								</div>
 								<div class='account-options'>
-									<div class='margin-bottom'>
+									<h3 class=' bold-font'>
+										<?php the_field('plus_title');?>
+									</h3>
+									<h4>
+										<span class='bold-font'>
+											<?php the_field('plus_price_monthly');?>
+										</span>
+										<span style="font-size:.7em">
+											/mo
+										</span>
+									</h4>
+									<div class='margin-top double-margin-bottom'>
+										<?php if( have_rows('plus_points') ): ?>
+											<ul class='list-unstyled pricing-list'>
+												<?php 
+
+												while( have_rows('plus_points') ): the_row(); 
+
+									// vars
+												$text = get_sub_field('point');
+												$tooltip = get_sub_field('tooltip');
+												$bold_class = get_sub_field('bold_class');
+
+												?>
+													<li>
+														<p>
+															<i class='material-icons' style='color:<?php the_field('plus_color');?>'>
+																check
+															</i>
+															<span class="<?php echo $bold_class; ?>">
+																<?php echo $text; ?>
+															</span >
+															<?php if( $tooltip ): ?>
+																<span class="tooltip-container" data-toggle="tooltip" title="<?php echo $tooltip; ?>" data-placement="right">
+																	<i class='material-icons placeholder-text-color tooltip-icon'>
+																		info
+																	</i>
+																</span>
+															<?php endif; ?>
+														</p>
+													</li>
+												<?php endwhile; ?>
+												<li>
+													<p>
+														<i class='material-icons extra-light-text-color'>
+															clear
+														</i>
+														<span class="extra-light-text-color">
+															Instant Video Chat Responses
+														</span>
+													</p>
+												</li>
+											</ul>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
+							<div class='text-center card-footer no-styling'>
+								<a class='btn btn-primary btn-block' href='<?php the_field('create_account_link', 'option'); ?>'>
+									Get started free
+								</a>
+							</div>
+						</div><!-- end card -->
+						<div class='card elevation-1'>
+							<div class='card-body' style='border-color:<?php the_field('pro_color');?>'>
+								<div class="plan-img">
+									<img width="127px" src="<?php the_field('pro_image');?>"/>
+								</div>
+								<div class='account-options'>
+									<h3 class=' bold-font'>
+										<?php the_field('pro_title');?>
+									</h3>
+									<h4>
+										<span class='bold-font'>
+											<?php the_field('pro_price_monthly');?>
+										</span>
+										<span style="font-size:.7em">
+											/mo
+										</span>
+									</h4>
+									<div class='margin-top double-margin-bottom'>
 										<?php if( have_rows('pro_points') ): ?>
 											<ul class='list-unstyled pricing-list'>
 												<?php 
@@ -126,24 +203,26 @@ Template Name: Pricing
 
 									// vars
 												$text = get_sub_field('point');
-												$subtext = get_sub_field('subtext');
 												$tooltip = get_sub_field('tooltip');
 												$bold_class = get_sub_field('bold_class');
-												$image = get_sub_field('image');
 
 												?>
 													<li>
-														<div class="media">
-															<img class="half-margin-right" src="<?php echo $image; ?>" width="92px">
-															<div class="media-body">
-																<p class="title">
-																	<?php echo $text; ?>
-																</p>
-																<p class="subtext">
-																	<?php echo $subtext; ?>
-																</p>
-															</div>
-														</div>
+														<p>
+															<i class='material-icons' style='color:<?php the_field('pro_color');?>;'>
+																check
+															</i>
+															<span class="<?php echo $bold_class; ?>">
+																<?php echo $text; ?>
+															</span >
+															<?php if( $tooltip ): ?>
+																<span class="tooltip-container" data-toggle="tooltip" title="<?php echo $tooltip; ?>" data-placement="right">
+																	<i class='material-icons placeholder-text-color tooltip-icon'>
+																		info
+																	</i>
+																</span>
+															<?php endif; ?>
+														</p>
 													</li>
 												<?php endwhile; ?>
 											</ul>
@@ -180,23 +259,6 @@ Template Name: Pricing
 
 		</div>
 	</section>
-</div>
-
-
-
-<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal fade video-modal' id='priceVideoModal' role='dialog' tabindex='-1'>
-	<div class='modal-dialog' role='document'>
-		<div class='modal-content'>
-			<div class='modal-body'>
-				<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
-					<span aria-hidden='true'>×</span>
-				</button>
-				<div class='embed-responsive embed-responsive-16by9'>
-					<iframe allowscriptaccess='always' class='embed-responsive-item' id='video' src='<?php the_field('video_url');?>'></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 
 

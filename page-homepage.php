@@ -22,47 +22,14 @@ $(document).ready(function(){
 </script>
 
 
-<style type="text/css">
-	
-#intro h1{
-	font-size: 61px;
-	font-size:<?php the_field('intro_font_size_lg');?>;
-	line-height:<?php the_field('intro_line_height_lg');?>;
-}
-
-/*md*/
-@media (max-width: 992px) {
-
-	#intro h1{
-		font-size: 47px;
-		line-height: 50px;
-		font-size:<?php the_field('intro_font_size_md');?>;
-		line-height:<?php the_field('intro_line_height_md');?>;
-	}
-
-}
-
-/*sm*/
-@media (max-width: 768px) {
-
-	#intro h1{
-		font-size:<?php the_field('intro_font_size_sm');?>;
-		line-height:<?php the_field('intro_line_height_sm');?>;
-	}
-
-}
-
-
-
-</style>
 
 <!-- used to style the header when there's no background image on the right -->
 <?php get_template_part( 'content', 'header-inject' ); ?>
 
 <div id='main'>
 	<section class='home-hero ' id='intro'>
-		<div class='container'>
-			<div class='row ' >
+		<div class='container-fluid'>
+			<div class='row' >
 				<div class='col-12 text-center margin-bottom'>
 					<h1 class='margin-bottom bold-font'>
 						<?php the_field('title_text');?>
@@ -70,16 +37,23 @@ $(document).ready(function(){
 					<h5 class='body-large'>
 						<?php the_field('lead_text');?>
 					</h5>
-					<div class='double-margin-top'>
-						<a class='btn btn-lg btn-primary margin-right' href='<?php the_field('primary_button_link');?>'>
-							<?php the_field('primary_button_text');?>
-						</a>
-						<button class='btn btn-lg btn-light' data-src='<?php the_field('video_url');?>' data-target='#homeVideoModal' data-toggle='modal' type='button'>
-							<i class='material-icons' style='font-size: 30px; top:9px; margin-top: -14px;'>
-								play_circle_outline
-							</i>
-							<?php the_field('video_button_text');?>
-						</button>
+				</div>
+			</div>
+		</div>
+		<div class='container'>
+			<div class='row' >
+					<div class='col-12 text-center'>
+						<div class='double-margin-top home-hero-buttons'>
+							<a class='btn btn-lg btn-primary margin-right' href='<?php the_field('primary_button_link');?>'>
+								<?php the_field('primary_button_text');?>
+							</a>
+							<button class='btn btn-lg btn-light' data-src='<?php the_field('video_url');?>' data-target='#homeVideoModal' data-toggle='modal' type='button'>
+								<i class='material-icons' style='font-size: 30px; top:9px; margin-top: -14px;'>
+									play_circle_outline
+								</i>
+								<?php the_field('video_button_text');?>
+							</button>
+						</div>
 					</div>
 				</div>
 				<div class='col-12'>
@@ -119,11 +93,20 @@ $(document).ready(function(){
 		<div class='container'>
 			<div class='row justify-content-center'>
 				<div class='col-lg-7'>
-					<h2 class='text-center bold-font no-margin-bottom'>
+					<h2 class='text-center bold-font double-margin-bottom'>
 						<?php the_field('tools_title');?>
 					</h2>
 				</div>
 			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col text-center d-none d-lg-block">
+					<img class=" margin-auto max-width" src="<?php bloginfo('template_url'); ?>/images/connector-home.svg" style="margin-bottom:-60px;">
+				</div>
+			</div>
+			
 		</div>
 
 <!-- start section -->
@@ -203,6 +186,14 @@ $(document).ready(function(){
 		<?php endif; ?>
 
 <!-- end section -->
+		<div class="container">
+			<div class="row">
+				<div class="col text-center d-none d-lg-block">
+					<img class=" margin-auto max-width" src="<?php bloginfo('template_url'); ?>/images/guide-1.svg">
+				</div>
+			</div>
+			
+		</div>
 
 <!-- start section -->
 
@@ -282,6 +273,14 @@ $(document).ready(function(){
 
 <!-- end section -->
 
+		<div class="container">
+			<div class="row">
+				<div class="col text-center d-none d-lg-block">
+					<img class=" margin-auto max-width" src="<?php bloginfo('template_url'); ?>/images/guide-2.svg">
+				</div>
+			</div>
+			
+		</div>
 
 <!-- start section -->
 
@@ -360,6 +359,15 @@ $(document).ready(function(){
 		<?php endif; ?>
 
 <!-- end section -->
+
+		<div class="container">
+			<div class="row">
+				<div class="col text-center d-none d-lg-block">
+					<img class=" margin-auto max-width" src="<?php bloginfo('template_url'); ?>/images/guide-1.svg">
+				</div>
+			</div>
+			
+		</div>
 
 <!-- start section -->
 

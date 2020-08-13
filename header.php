@@ -20,9 +20,12 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width" />
 
-  <title><?php wp_title( '|', true, 'right' ); ?></title>
+  <title><?php wp_title(); ?></title>
+  <meta name="description" content="<?php the_field('meta_description', 'option'); ?>">
 
-  <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" type="image/x-icon">
+
+  <link id="favicon" rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" type="image/png" sizes="16x16 32x32 48x48">
+
   <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png">
 
   <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -32,6 +35,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/bower_components/node_modules/bootstrap/dist/js/bootstrap.min.js">
   </script>
+
+  <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
+  <meta property="og:description" content="<?php the_field('meta_description', 'option'); ?>">
   <meta property="og:image" content="<?php the_field('preview_image', 'option'); ?>">
   <meta name="twitter:image" content="<?php the_field('preview_image', 'option'); ?>">
   <?php wp_head(); ?>
@@ -171,6 +177,7 @@
         </div>
       </div>
     </nav>
+    <img class='hidden' src='<?php the_field('preview_image', 'option'); ?>' style='display:none;'>
 
 
 

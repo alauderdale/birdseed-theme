@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+
+
   $( ".monthly-toggle" ).click(function() {
         $( ".monthly" ).addClass( "shown" );
         $( ".annually" ).removeClass( "shown" );
@@ -92,7 +94,9 @@ $('a[href*="#"]')
   });
 
 
-
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  })
 
 
   ///stop homepage video on modal close

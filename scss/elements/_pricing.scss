@@ -1,4 +1,20 @@
 
+.tooltip{
+	top:-1%!important;
+}
+
+.pricing-hero{
+	h1{
+		font-size: 56px;
+		line-height: 68px;
+		text-decoration: underline;
+		@include breakpoint(sm) {
+			font-size: 42px;
+			line-height: 50px;
+		}
+	}
+}
+
 #pricing-hero{
 	padding-top:$baseline*8;
 	@include breakpoint(sm) {
@@ -8,23 +24,71 @@
 
 ul.pricing-list{
 	width:100%;
+	margin: 0;
+	padding:0;
 	li{
-		border-bottom:1px solid $border-color;
-		padding:$baseline/2 0;
+		background:shade($off-white-color,1%);
+		border-radius: 10px;
+		padding:$baseline;
 		vertical-align: middle;
+		font-family:$regular-font-name;
+		margin:8px 0;
 		p{
 			margin-bottom:0;
-			display: inline-block;
 			vertical-align: middle;
-			font-size:20px;
+			&.title{
+				font-weight:700;
+				line-height: 1.3em;
+				margin-bottom: 8px;
+				margin-top:8px;
+			}
+			&.subtext{
+				font-size:14px;
+				line-height: 1.3em;
+			}
 			i{
 				margin-right:10px;
 				position:relative;
-				top:3px;
+				top:6px;
+				&.tooltip-icon{
+					font-size: 1.2rem;
+					top:5px;
+					left:3px;
+					cursor: pointer;
+					display: inline-block;
+					z-index: 999;
+				}
+			}
+			.tooltip-container{
+
 			}
 		}
-		&:last-of-type{
-			border:none;
+
+	}
+	&.list-lg{
+		li{
+			padding:$baseline/2 0;
+			p{
+				font-size:18px;
+				@include breakpoint(lg) {
+					font-size:15px;
+				}
+			}
+		}
+		@include breakpoint(sm) {
+			li{
+				p{
+					font-size:14px;
+				}
+			}
+		}
+		
+	}
+	&.bordered-list{
+		li{
+			background:transparent;
+			border-bottom:1px solid $border-color;
+			border-radius:0px;
 		}
 	}
 }
@@ -36,14 +100,25 @@ ul.pricing-list{
     		margin-bottom: 15px;
 		}
 	}
+	.card, .card-body, .card-footer{
+		border-radius:10px!important;
+	}
 	.card-body{
-		padding-bottom:$baseline;
+		position:relative;
+		padding-bottom:0;
+		border-top:5px solid $primary-color;
+		padding:5px 16px;
 	}
 	.card-footer{
 		padding-top:0!important;
 		.btn{
-			padding:22px;
+			padding:12px;
 		}
+	}
+	.plan-img{
+		position:absolute;
+		top:10px;
+		right:20px;
 	}
 }
 
