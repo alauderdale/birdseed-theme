@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Pricing
+Template Name: Pricing old 2
  */
 ?>
 

@@ -127,9 +127,14 @@ ul.pagination{
 ul.category-nav{
 	li{
 		margin-right:24px;
+		font-weight:800;
+		font-size: 20px;
+		a{
+			color:$text-color;
+		}
 		&.current-cat, &.current-menu-item{
 			a{
-				color:$text-color;
+				color:$link-color;
 			}
 		}
 		&.dropdown{
