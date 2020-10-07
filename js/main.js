@@ -14,6 +14,8 @@ $(document).ready(function(){
         $( ".monthly" ).removeClass( "shown" );
     });
 
+  
+
 	$( ".menu-button" ).click(function() {
         $( "html" ).toggleClass( "nav-open" );
     });

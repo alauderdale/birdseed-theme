@@ -1,3 +1,17 @@
+//toggle
+
+.annually{
+	display: none;
+}
+.monthly{
+	display: none;
+}
+
+.shown{
+	display: block!important;
+}
+
+
 
 .tooltip{
 	top:-1%!important;
@@ -27,12 +41,11 @@ ul.pricing-list{
 	margin: 0;
 	padding:0;
 	li{
-		background:shade($off-white-color,1%);
-		border-radius: 10px;
-		padding:$baseline;
+		padding:5px 0;
+		border-bottom:1px solid $border-color;
 		vertical-align: middle;
 		font-family:$regular-font-name;
-		margin:8px 0;
+		margin:5px 0;
 		p{
 			margin-bottom:0;
 			vertical-align: middle;
@@ -107,7 +120,7 @@ ul.pricing-list{
 		position:relative;
 		padding-bottom:0;
 		border-top:5px solid $primary-color;
-		padding:5px 16px;
+		padding:16px 20px;
 	}
 	.card-footer{
 		padding-top:0!important;

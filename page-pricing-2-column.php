@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Pricing old 2
+Template Name: Pricing 2 column 
  */
 ?>
 
@@ -103,6 +103,23 @@ Template Name: Pricing old 2
 					<p class='text-center body-large'>		
 						<?php the_field('panels_lead');?>
 					</p>
+					<div class="pricing-toggle-container padding-top padding-bottom">
+						<div class="pricing-toggle text-center">
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-secondary monthly-toggle">
+									<input type="radio" name="options" id="option1" checked> 	
+										Bill monthly
+								</label>
+								<label class="btn btn-secondary active annual-toggle">
+									<input type="radio" name="options" id="option3"> 
+										Bill yearly
+								</label>
+							</div>
+						</div>
+						<div class="text-center">
+							<img style="position:relative; left:30px; top:5px;" src="<?php bloginfo('template_url'); ?>/images/save.svg"/>	
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center margin-top">
@@ -117,14 +134,29 @@ Template Name: Pricing old 2
 									<h3 class=' bold-font'>
 										<?php the_field('plus_title');?>
 									</h3>
-									<h4>
-										<span class='bold-font'>
-											<?php the_field('plus_price_monthly');?>
-										</span>
-										<span style="font-size:.7em">
-											/mo
-										</span>
-									</h4>
+									<div class="annually shown">
+										<h4>
+											<span class='bold-font'>
+												<?php the_field('plus_price_annual');?>
+											</span>
+											<span style="font-size:.7em">
+												/ month
+											</span>
+										</h4>
+										<p class="billed-yearly">
+											Billed yearly
+										</p>
+									</div>
+									<div class="monthly">
+										<h4>
+											<span class='bold-font'>
+												<?php the_field('plus_price_monthly');?>
+											</span>
+											<span style="font-size:.7em">
+												/ month
+											</span>
+										</h4>
+									</div>
 									<div class='margin-top double-margin-bottom'>
 										<?php if( have_rows('plus_points') ): ?>
 											<ul class='list-unstyled pricing-list'>
@@ -186,14 +218,29 @@ Template Name: Pricing old 2
 									<h3 class=' bold-font'>
 										<?php the_field('pro_title');?>
 									</h3>
-									<h4>
-										<span class='bold-font'>
-											<?php the_field('pro_price_monthly');?>
-										</span>
-										<span style="font-size:.7em">
-											/mo
-										</span>
-									</h4>
+									<div class="annually shown">
+										<h4>
+											<span class='bold-font'>
+												<?php the_field('pro_price_annual');?>
+											</span>
+											<span style="font-size:.7em">
+												/ month
+											</span>
+										</h4>
+										<p class="billed-yearly">
+											Billed yearly
+										</p>
+									</div>
+									<div class="monthly">
+										<h4>
+											<span class='bold-font'>
+												<?php the_field('pro_price_monthly');?>
+											</span>
+											<span style="font-size:.7em">
+												/ month
+											</span>
+										</h4>
+									</div>
 									<div class='margin-top double-margin-bottom'>
 										<?php if( have_rows('pro_points') ): ?>
 											<ul class='list-unstyled pricing-list'>
