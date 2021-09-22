@@ -1,0 +1,27 @@
+.alert-promo{
+	background:#4C2EB2;
+	color:white;
+	border-radius:0;
+	margin: 0;
+	z-index: 99;
+	font-size: 15px;
+	padding:0px;
+	width:100%;
+	.btn{
+		font-size: 15px;
+		margin:10px 0;
+		margin-left:10px;
+		background:$accent-six;
+		border:none;
+		&:hover, &:active{
+			background:shade($accent-six,20%)!important;
+			border:none!important;
+		}
+	}
+	.close{
+		box-shadow: none;
+		&:hover{
+			color:white;
+		}
+	}
+}

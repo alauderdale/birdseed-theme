@@ -34,6 +34,8 @@ function boiler_setup() {
 		'menu-mobile' => __( 'Mobile Menu', 'boiler' ),
 		'menu-tour' => __( 'Tour menu', 'boiler' ),
 		'menu-about' => __( 'About menu', 'boiler' ),
+		'menu-resources' => __( 'Resources menu', 'boiler' ),
+		'menu-industries' => __( 'Industries menu', 'boiler' ),
 		'menu-legal' => __( 'Legal menu', 'boiler' ),
 		'menu-blog-cats' => __( 'Blog cats menu', 'boiler' ),
 		'menu-resource-cats' => __( 'Resource cats menu', 'boiler' ),

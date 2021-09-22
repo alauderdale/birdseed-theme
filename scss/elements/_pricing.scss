@@ -1,3 +1,49 @@
+.strikethrough{
+	display:inline;
+	position:relative;
+	margin-right:5px;
+	&:before{
+		position: absolute;
+    content: "";
+    left: 0px;
+    right: 5px;
+    border-top: 4px solid;
+    border-color: red;
+    z-index: 99;
+    top: 15px;
+    transform: rotate(-20deg);
+	}
+}
+
+$discount-color:#9A7DFF;
+
+.discounted-card{
+	border:solid 10px $discount-color;
+	overflow: hidden;
+	box-shadow: 0 8px 16px rgba(81, 107, 152, 0.24);
+	.card-body{
+		border:none!important;
+	}
+	&:before{
+		    content: "SAVE 90%";
+    position: absolute;
+    top: 33px;
+    right: -111px;
+    width: 300px;
+    height: 27px;
+    transform: rotate(45deg);
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: $discount-color;
+    text-align: center;
+    display: block;
+    z-index: 99;
+	}
+}
+
+
+
 //toggle
 
 .annually{

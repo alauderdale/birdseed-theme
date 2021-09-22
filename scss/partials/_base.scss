@@ -29,6 +29,10 @@ body{
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  padding-top:40px;
+  @include breakpoint(sm) {
+    padding-top:80px;
+  }
 
 }
 
@@ -169,3 +173,4 @@ img{
     padding:0;
   }
 }
+

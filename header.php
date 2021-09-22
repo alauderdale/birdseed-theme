@@ -52,7 +52,7 @@
       <div class="birdseed-button">
         <img src="<?php bloginfo('template_url'); ?>/images/birdseed-button.svg" width="62px">
       </div>
-      <div class="try-it-out d-none d-lg-inline"></div>
+<!--       <div class="try-it-out d-none d-lg-inline"></div> -->
     </div>  
     <div class='mobile-menu d-lg-none'>
       <div class='navbar-nav mx-auto'>
@@ -83,7 +83,34 @@
         </div>
       </div>
     </div>
-    <nav class='navbar fixed-top navbar-expand-sm navbar-page-top' id='primary-nav'>
+    <nav class='navbar d-block fixed-top navbar-expand-sm navbar-page-top promo-alert-active' id='primary-nav'>
+<!--       <div class='alert alert-promo alert-dismissible fade show' role='alert'>
+        <div class='text-center'>
+          <div class='align-middle'>
+            <div class='inline align-middle'>
+              <strong>
+                Black Friday Sale
+              </strong>
+              Get BirdSeed PRO for
+              <strong>
+                $99/year
+              </strong>
+              for life
+            </div>
+            <div class='inline align-middle'>
+              <a class='btn-primary btn' href='https://birdseed.io/pricing/#pricing-section' style='min-width:auto;'>
+                Learn more
+              </a>
+            </div>
+          </div>
+          <button aria-label='Close' class='close' data-dismiss='alert' type='button'>
+            <span aria-hidden='true'>
+              ×
+            </span>
+          </button>
+        </div>
+      </div> -->
+
       <div class='container'>
         <a class='navbar-brand' href='<?php bloginfo('url')?>'>
           <img src='<?php the_field('logo', 'option'); ?>' width='190px'>
@@ -138,6 +165,55 @@
                 ?>
               </div>
             </div>
+            <div class='nav-item dropdown nav-item-primary'>
+              <a class='nav-link' data-toggle='dropdown' href='#' role='button'>
+                Resources
+                <i class='material-icons'>
+                  keyboard_arrow_down
+                </i>
+              </a>
+              <div class='dropdown-menu'>
+                <?php    
+                  $primaryMenuDefaults = array(
+                  'theme_location' => 'menu-resources',
+                  'container'       => false, 
+                  'container_class' => 'dropdown-item', 
+                  'echo'            => false,
+                  'fallback_cb'     => false,
+                  'before'       => '',
+                  'after'        => '',
+                  'items_wrap'      => '%3$s',
+                  'depth'           => 0
+                  );
+                  echo strip_tags(wp_nav_menu( $primaryMenuDefaults ), '<div><div><a>');
+                ?>
+              </div>
+            </div>
+            <div class='nav-item dropdown nav-item-primary'>
+              <a class='nav-link' data-toggle='dropdown' href='#' role='button'>
+                Industries
+                <i class='material-icons'>
+                  keyboard_arrow_down
+                </i>
+              </a>
+              <div class='dropdown-menu'>
+                <?php    
+                  $primaryMenuDefaults = array(
+                  'theme_location' => 'menu-industries',
+                  'container'       => false, 
+                  'container_class' => 'dropdown-item', 
+                  'echo'            => false,
+                  'fallback_cb'     => false,
+                  'before'       => '',
+                  'after'        => '',
+                  'items_wrap'      => '%3$s',
+                  'depth'           => 0
+                  );
+                  echo strip_tags(wp_nav_menu( $primaryMenuDefaults ), '<div><div><a>');
+                ?>
+              </div>
+            </div>
+
             <?php    
               $defaults = array(
               'theme_location' => 'menu-header',

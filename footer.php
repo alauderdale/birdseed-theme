@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class='row margin-top'>
-          <div class='col-md-8'>
+          <div class='col-md-9'>
             <div class='row'>
               <div class='col-md'>
                 <p class='bold-font white-text-color'>
@@ -30,6 +30,13 @@
                   </li>
                   <li>
                     <?php the_field('phone_number', 'option'); ?>
+                  </li>
+                </ul>
+                <ul class="footer-list list-unstyled">
+                  <li>
+                    <a href="https://status.birdseed.io/" target="_blank">
+                      SYSTEM STATUS
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -55,6 +62,16 @@
               </div>
               <div class='col-md'>
                 <p class='bold-font white-text-color'>
+                  Resources
+                </p>
+                <?php wp_nav_menu( array( 
+                'theme_location' => 'menu-resources',  
+                'menu_class' => 'list-unstyled footer-list no-margin-bottom',
+                'items_wrap'  => '<ul id="%1$s" class="%2$s">  %3$s</ul>' 
+                )); ?>
+              </div>
+              <div class='col-md'>
+                <p class='bold-font white-text-color'>
                   Legal
                 </p>
                 <?php wp_nav_menu( array( 
@@ -65,7 +82,7 @@
               </div>
             </div>
           </div>
-          <div class='col-md-4'>
+          <div class='col-md-3'>
             <div class='row'>
               <div class='col-md'>
                 <p class='body-large bold-font white-text-color'>

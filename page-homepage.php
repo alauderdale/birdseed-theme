@@ -26,8 +26,8 @@ $(document).ready(function(){
 <!-- used to style the header when there's no background image on the right -->
 <?php get_template_part( 'content', 'header-inject' ); ?>
 
-<div id='main'>
-	<section class='home-hero ' id='intro'>
+	<div class='anchor' id='intro'></div>
+	<section class='home-hero' >
 		<div class='container-fluid'>
 			<div class='row' >
 				<div class='col-12 text-center margin-bottom'>
@@ -62,8 +62,8 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</section>
-
-	<section id='why' class='anchor off-white-bg-color'>
+	<div class='anchor' id='why'></div>
+	<section  class='off-white-bg-color'>
 		<div class='container'>
 			<div class='row'>
 				<div class='col-lg-12'>
@@ -88,8 +88,8 @@ $(document).ready(function(){
 		</div>
 	</section>
 
-
-	<section class="anchor" id='tools'>
+	<div class='anchor' id='tools'></div>
+	<section>
 		<div class='container'>
 			<div class='row justify-content-center'>
 				<div class='col-lg-7'>
@@ -450,8 +450,8 @@ $(document).ready(function(){
 	</section>
 
 
-
-	<section id='features' class='anchor off-white-bg-color'>
+	<div class='anchor' id='features'></div>
+	<section class='off-white-bg-color'>
 		<div class='container'>
 			<div class='row'>
 				<div class='col-lg-12'>
@@ -496,8 +496,8 @@ $(document).ready(function(){
 
 
 
-
-	<section id='how-it-works' class="anchor">
+	<div class='anchor' id='how-it-works'></div>
+	<section >
 		<div class='container'>
 			<div class='row justify-content-center'>
 				<div class='col-lg-9'>
