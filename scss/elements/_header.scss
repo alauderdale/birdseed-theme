@@ -40,6 +40,9 @@
 	}
 
 	.create-account-button{
+		padding:12px;
+		font-size: 14px;
+		min-width:auto;
 		@include breakpoint(lg) {
 			font-size: 13px;
 			min-width:auto;
@@ -51,8 +54,13 @@
 		position:relative;
 		top:-4px;
 		margin-right:40px;
-		@include breakpoint(md) {
-		
+		width: 200px;
+		img{
+			width: 100%;
+		}
+		@include breakpoint(lg) {
+			margin-right:20px;
+			width: 170px;
 		}
 	}
 	.navbar-nav{
