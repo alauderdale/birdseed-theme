@@ -161,3 +161,17 @@ ul.category-nav{
 		}
 	}
 }
+
+
+.two-col-dropdown{
+	min-width: 460px!important;
+	padding:15px;
+	a.dropdown-item{
+		padding:5px!important;
+		&:hover{
+			background:transparent!important;
+		}
+	}
+}
+
+

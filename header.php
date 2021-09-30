@@ -196,7 +196,7 @@
                   keyboard_arrow_down
                 </i>
               </a>
-              <div class='dropdown-menu'>
+              <div class='dropdown-menu two-col-dropdown'>
                 <?php    
                   $primaryMenuDefaults = array(
                   'theme_location' => 'menu-industries',
@@ -211,6 +211,61 @@
                   );
                   echo strip_tags(wp_nav_menu( $primaryMenuDefaults ), '<div><div><a>');
                 ?>
+                  <div class="row">
+                    <div class="col-6">
+                      <a class="dropdown-item" href="https://birdseed.io/industries/real-estate/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/07/Real-estate.svg" width="40px">
+                        Real estate
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/e-commerce/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/07/E-commerece.svg" width="40px">
+                        E-commerece
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/law-firm/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/07/Law-firms.svg" width="40px">
+                        Law firms
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/church/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/07/Churches.svg" width="40px">
+                        Churches
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/home-services/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/07/Home-services.svg" width="40px">
+                        Home services
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/automotive/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/07/Car-dealerships.svg" width="40px">
+                        Car dealerships
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a class="dropdown-item" href="https://birdseed.io/industries/digital-services/">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/09/Digital-services-img.svg" width="40px">
+                        Digital services
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/restaurants">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/09/Restaurants-img.svg" width="40px">
+                        Restaurants
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/education">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/09/Education-img.svg" width="40px">
+                        Education
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/home-construction">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/09/Home-construction-img.svg" width="40px">
+                        Home construction
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/travel-agents">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/09/Travel-agents-img.svg" width="40px">
+                        Travel agents
+                      </a>
+                      <a class="dropdown-item" href="https://birdseed.io/industries/self-storage">
+                        <img src="https://birdseed.io/wp-content/uploads/2021/09/Self-storage-img.svg" width="40px">
+                        Self storage
+                      </a>
+                    </div>
+                  </div>
+                
               </div>
             </div>
 
